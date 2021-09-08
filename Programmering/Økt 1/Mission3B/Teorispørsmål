@@ -1,0 +1,53 @@
+1.  Hva er "7" og hva er 7 i programmering.
+    - "7" vil tolkes som en string og 7 vil tolkes som et tall.
+
+2.  Returnerer promt()-metoden en String eller et Number hvis du taster inn 7?
+    - Hvis man taster bare 7 inn i promt, vil det tolkes som en String. Hvis du vil at det skal tolkes som en Number, 
+    så må du bruke `Number(7)` i promt. Eks: `promt(Number(7))`.
+
+3.  Hva gjør Number() og parseInt()?
+    - `Number()` kan gjøre om JavaScript variabler til Number. Variabelen kan bare være tall. Det kan også være komma mellom tallene men ikke mellomrom. Hvis den ikke klarer å konvertere tall, vil det returnere `NaN` (Not a Number).
+    Eksempler på bruk av `Number()`:
+    ```js
+    Number(true);          // returnerer 1
+    Number(false);         // returnerer 0
+    Number("10");          // returnerer 10
+    Number("  10");        // returnerer 10
+    Number("10  ");        // returnerer 10
+    Number(" 10  ");       // returnerer 10
+    Number("10.33");       // returnerer 10.33
+    Number("10,33");       // returnerer NaN
+    Number("10 33");       // returnerer NaN
+    Number("John");        // returnerer NaN
+    ```
+    `parseInt()` returnerer hele nummer. Mellomrom er tillat men returenerer bare det første tallet. Hvis det ikke er et tall på starten vil det returnere `Nan`.
+    Eksempler på bruk av `parseInt()`:
+    ```js
+    parseInt("-10");        // returns -10
+    parseInt("-10.33");     // returns -10
+    parseInt("10");         // returns 10
+    parseInt("10.33");      // returns 10
+    parseInt("10 20 30");   // returns 10
+    parseInt("10 years");   // returns 10
+    parseInt("years 10");   // returns NaN 
+    ```
+
+3.  Hva skjer hvis man prøve å addere to tall som man har fått fra `promt()` uten å bruke `Number()` eller `parseInt()`? Test
+    dette gjerne ut i praksis.
+    - Det kommer til å legge tallene som strings og ikke tall. Som vil si at istedenfor 10 + 10 = 20, så vil man få 10 + 10 = 1010.
+    Eksempel:
+    Her vil det returnere tallene etter hverandre istedenfor å addere tallene.
+    ```js
+    var one = prompt();
+    var two = prompt();
+
+    alert(one + two);
+    ```
+
+    Her vil den addere tallene riktig og returnere summen istedenfor å legge de etter hverandre.
+    ```js
+    var one = Number(promt());
+    var two = Number(promt());
+
+    alert(one + two);
+    ```

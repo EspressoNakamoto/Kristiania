@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindre enn, lik eller større enn?</title>
+</head>
+<body>
+    <img src="/smile.jfif" alt="smile">
+    <script>
+        checkNumber();
+        function checkNumber() {
+            var input = prompt("Gjett ett tall mellom 1 og 10");
+            if (input == 9) {
+                alert("Riktig!");
+            }
+            else if (input > 9) {
+                alert("Tallet er større enn du gjettet!");
+                checkNumber();
+            }
+            else if (input < 9) {
+                alert("Tallet er mindre enn du gjettet!");
+                checkNumber();
+            }
+        }
+    </script>
+</body>
+</html>

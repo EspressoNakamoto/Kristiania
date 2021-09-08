@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dørvakt</title>
+</head>
+<body>
+
+    <script>
+        // Asks for id
+        let id = prompt("Har du legitimasjon?");
+        
+        // If id, then asks for age
+        if (id.toLowerCase() == "ja") {
+            var age = prompt("Hvor gammel er du?");
+
+            // If age is equal to or higher than 18, then allow
+            if (age >= 18) {
+                alert("Du får komme inn")
+            } else {
+                alert("Du får ikke komme inn")
+            }
+        } else {
+            deny = alert("Du får ikke komme inn")
+        }
+    </script>
+</body>
+</html>
