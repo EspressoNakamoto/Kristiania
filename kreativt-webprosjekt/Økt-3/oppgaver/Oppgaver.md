@@ -26,11 +26,13 @@
 
 9.  Hvordan lager man interne lenker slik Wikipedia bruker i Contents-boksen: https://en.wikipedia.org/wiki/HTML  
     Man bruker id og href attributen. F.eks:
-    ```html
+
+    ````html
     <a href="text">link til paragraf</a>
 
-        <p id="text"></p>
-        ```
+    <p id="text"></p>
+    ```
+    ````
 
 10. Hva er hensikten med div-tagen?  
     div-tagen definerer en seksjon i en HTML-dokument og blir brukt som en container for HTML elementer.
