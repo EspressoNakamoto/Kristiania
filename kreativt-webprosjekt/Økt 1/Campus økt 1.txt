@@ -1,0 +1,97 @@
+	Campus-økt 1 HTML
+Hensikten med disse oppgavene er å øke forståelsen av HTML teoretisk og praktisk. 
+Noen av oppgavene kan kreve utforskning utover det som blir presentert i slideseriene. 
+Gå da gjerne inn på http://www.w3schools.com, andre nettsider eller snakk med veilederne for å finne svar på spørsmålene. 
+Det er en god egenskap å vite hvordan og hva man skal søke på nettet for løsninger. 
+Du skal ikke levere inn disse oppgavene.
+
+	Teori
+1.	Hva er HTML?
+	HTML står for Hyper Text Markup Language og er et standard språk for nettsider.
+
+2.	Hva er HTML5?
+	HTML5 er den nyeste versonen av HTML.
+
+3.	Hva menes med semantisk koding i HTML?
+	Semantisk koding i HTML er å bruke tagger som det er ment å brukes.
+
+4.	Hva er forholdet mellom HTML og CSS?
+	HTML og CSS bruker man i samspill. HTML bruker man for å legge innhold på siden og CSS er for hvordan siden skal se ut.
+
+5.	Hva er Doctype-deklarasjonen for?
+	Doctype-deklarasjonen er for å fortelle nettleseren hvordan den skal tolke koden.
+
+6.	Hvordan er Doctype-deklarasjonen for HTML5?
+	<DOCTYPE! HTML>
+
+7.	Hvilke HTML-tager må minimum være med i et HTML5-dokument?
+	Man trenger doctype, html, head og body. Og for å vise noe på siden så trenger man en til som en header eller paragraf.
+
+8.	Hvor mange head-tager (hvor h1 er en av dem) er det?
+	Det er seks. H1, h2, h3, h4, h5 og h6.
+
+9.	Hva er den korrekte tagen å bruke for å legge til et avsnitt?
+	<p></p>
+
+10.	Hvilke deler består en (hyper)lenke-tag av?
+	<a> taggen definerer en lenke. Og det består av "<a href="(Link)">(Tekst)</a>.
+	I opening taggen bruker man href attributten som indikerer til linkens destinasjon.
+	Mellom opening taggen og closing taggen så kan man ha tekst eller bilde hvor man trykker på siden for å komme til linken.
+
+11.	Hva er forskjellen mellom ul og ol visuelt? 
+	ul taggen er uordnet liste(punktet) og ol er ordnet liste(nummerert).
+
+12.	Hva er forskjellen mellom ul og ol semantisk?
+	Det er å vite hva de hvordan man bruker de riktig. ul bruker man når man skal ha en liste til f.eks. ingredienser.
+	Og ol bruker man til f.eks. en topp 10 liste.
+
+13.	Lag en tabell for å vise informasjon om ansatte i en bedrift med navn, mobil, stilling og bilde.
+	Se i "Ansatte-tabell mappen.
+
+14.	Hva menes med validering av HTML-kode?
+	Å valdere en HTML-kode er å skjekke om koden er skrevet riktig. 
+	Man kan validere koden ved å bruke online tjenester f.eks. https://validator.w3.org/.
+	Da vil siden lese HTML-koden og gi deg tilbakemelding om det er skrevet riktig eller om noe er galt.
+
+15.	Hva er et attributt? Hva er malen for å legge til et attributt på et element? Ta gjerne utgangspunkt i <a> og <img>
+	En attributt gir tillegsinformasjon om et element. Attributten er alltid spesifisert i start taggen.
+	I <a> taggen som blir brukt til hyperlinks, vil opening taggen se sånn ut: <a href="">. I <a> taggen er attributen href.
+	I <img> taggen som blir brukt til å vise bilder, vil den se sånn ut: <img src="">. I <img> taggen er attributen src.
+
+16.	Hvilken tag brukes til å legge til et sitat?
+	For å legge til et sitat bruker vi <blockquote> elementet eller <q> for korte sitater.
+
+17.	Hva er <hr> tagen for?
+	<hr> tagen blir vist som en horisontal linje som blir brukt til å dele opp innhold.
+
+18.	Hva er <br> tagen for?
+	<br> tagen setter inn et linjeskift som blir brukt når man skriver adresser og dikt.
+	Man bruker det ikke til å dele opp paragrafer.
+
+19.	Hva brukes <span> til?
+	<span> bruker vi til å merke/fremheve en del av en tekst.
+
+20.	Lag et eksempel på bruk av <dl>
+	Se i Ingredienser.html filen.
+
+21.	Hvordan åpner man opp en lenke i ny fane eller nytt vindu?
+	Når vi bruker hyperlinks så kan vi bruke target attributen som spesifiserer hvor man åpner linken.
+	For å åpne en lenke i ny fane eller nytt vindu skriver vi i opening tagen: target="_blank".
+
+22.	Hvordan legger man til kommentar i koden (som ikke vil være synlig på nettsiden)? 
+	For å legge til kommentar i koden bruker vi <!--...--> tagen.
+	F.eks. <!--Det her kommer ikke til å bli vist på nettsiden-->
+
+23.	Hva er den korrekte måten å kode opp en navigasjonsmeny?
+	Vi bruker href og id attributtene. href er for å ta deg til en punkt på siden eller en annen side.
+	id er et punkt i koden som href kan ta deg til.
+	Navigasjonsmenyen vil vi gjerne ha på toppen av nettsiden eller som en pop-out meny fra siden.
+
+	
+	HTML-side
+Dette er en øvelse i å kode HTML. Du skal ikke tenke på utseendet (farge på tekst, layout osv.) til nettsiden her, kun struktur, innhold og retningslinjer for utvikling!
+1.	Lag en nettside i HTML5 med valgfritt tema. For eksempel en side om dine favorittfilmer (med anmeldelser), spill, bøker, sport, klovner e.l. La siden inneholde følgende elementer: overskrifter, paragrafer, lister, tabeller, bilder og lenker. 
+2.	Lag deretter to "mer-info"-sider som hovedsiden lenker til som skal lenke tilbake igjen slik at man kan gå frem og tilbake mellom sidene.  En "mer-info"-side kan eksempelvis for en webshop være en produktside som gir mer detaljer om ett enkelt produkt.
+3.	Valider HTML: https://html5.validator.nu/ og/eller http://validator.w3.org/
+4.	Vis siden og koden din til en medstudent og få tilbakemelding på ryddighet og semantikk og eventuelt forbedringspotensial. 
+	Se i HTML-side mappen.
