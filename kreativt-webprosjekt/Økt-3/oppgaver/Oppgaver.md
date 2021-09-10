@@ -87,12 +87,15 @@
         }
         ```
 
-21. Kan man sette forskjellige farger på forskjellige sider av en borderfor eksempel at border på toppen av et element er rød og border på bunn er blå?  
+21. Kan man sette forskjellige farger på forskjellige sider av en border for eksempel at border på toppen av et element er rød og border på bunn er blå?  
     Ja, man må definere hvilken side man vil ha rød og blå på.
 
         ```css
         img {
-            border-top: red;
-            border-bottom: blue;
+            border-top: solid red;
+            border-bottom: solid blue;
         }
         ```
+
+22. Kan et HTML-element ha flere klasser?
+    Ja, i forhold til id hvor man bare kan ha en unik id, kan man ha flere klasser av samme navn.
