@@ -98,4 +98,4 @@
         ```
 
 22. Kan et HTML-element ha flere klasser?
-    Ja, i forhold til id hvor man bare kan ha en unik id, kan man ha flere klasser av samme navn. Test
+    Ja, i forhold til id hvor man bare kan ha en unik id, kan man ha flere klasser av samme navn.
