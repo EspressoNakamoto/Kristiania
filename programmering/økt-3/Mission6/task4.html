@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasjon om superhelten</title>
+    <style>
+        img {
+            height: 400px;
+            
+        }
+
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Klikk på superheltene for å få informasjon om dem.</h1>
+    <img id="black-widow" src="images/black-widow.jfif" alt="Black Widow posing">
+    <img id="captain-america" src="images/captain-america.jfif" alt="Captain America posing">
+    <img id="iron-man" src="images/iron-man.jfif" alt="Iron Man posing">
+    <img id="thor" src="images/thor.jfif" alt="Thor posing">
+    <p id="info"></p>
+
+    <script>
+        var bW = document.getElementById("black-widow");
+        var cA = document.getElementById("captain-america");
+        var iM = document.getElementById("iron-man");
+        var tP = document.getElementById("thor");
+        var infoP = document.getElementById("info");
+
+        function blackwidowOutput() {
+            infoP.innerHTML = "Black Widow er en amerikansk science fiction-film fra 2021 med Scarlett Johansson i hovedrollen som den russiske agenten Natasja Romanova, fortellingens «Sorte enke». Den fiktive skikkelsen bygger på en tegneseriefigur fra det såkalte Marvel-universet, hvor handlingen utspiller seg efter begivenhetene i Captain America: Civil War.";
+        }
+        function captainamericaOutput() {
+            infoP.innerHTML = "Captain America er en tegneseriefigur og superhelt skapt av Joe Simon og Jack Kirby i 1940.";
+        }
+        function ironmanOutput() {
+            infoP.innerHTML = "Iron Man er en superhelt som dukker opp i amerikanske tegneserier utgitt av Marvel Comics. Karakteren ble skapt av forfatter og redaktør Stan Lee, utviklet av skribent Larry Lieber, og designet av kunstnerne Don Heck og Jack Kirby. Karakteren gjorde sin første opptreden i Tales of Suspense #39, og fikk sin egen tittel i Iron Man #1.";
+        }
+        function thorOutput() {
+            infoP.innerHTML = "Thor Odinson, eller ganske enkelt Thor, er en fiktiv karakter som vises i amerikanske tegneserier utgitt av Marvel Comics. Karakteren er basert på den norrøne guden med samme navn, som er den asgardiske tordenguden som har den fortryllede hammeren Mjolnir, som gir ham muligheten til å fly og manipulere været blant sine andre overmenneskelige egenskaper.";
+        }
+
+        bW.onclick = blackwidowOutput;
+        cA.onclick = captainamericaOutput;
+        iM.onclick = ironmanOutput;
+        tP.onclick = thorOutput;
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+### Begreper og terminologi
+
+- Fremmednøkkel -

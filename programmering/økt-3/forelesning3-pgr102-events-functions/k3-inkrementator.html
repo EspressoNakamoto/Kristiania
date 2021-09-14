@@ -13,6 +13,27 @@
     -->
 </head>
 <body>
-    
+    <input id="increment-btn" type="button" value="Øk tallet">
+    <p id="number-p">0</p>
+
+    <script>
+        var incrementBtn = document.getElementById("increment-btn");
+        var numberP = document.getElementById("number-p");
+
+        // var number = 0;
+
+        function incrementNumber() {
+
+            var number = parseInt(numberP.innerHTML);
+            number += 100;
+
+            numberP.innerHTML = number;
+
+            // number += 1;
+            // numberP.innerHTML = number;
+        }
+
+        incrementBtn.onclick = incrementNumber;
+    </script>
 </body>
 </html>
