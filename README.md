@@ -1,3 +1,2 @@
 # Kristiania
 Schoolwork
-yuuuup
