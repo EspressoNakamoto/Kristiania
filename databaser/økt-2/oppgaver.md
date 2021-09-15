@@ -112,4 +112,4 @@ ORDER BY NumberOfCountries DESC;
 
 Jeg kan ikke finne noen fremmednøkler i tabellene city, country og countrylanguage i databasen world. Hvilke kolonner kunne vi benyttet som fremmednøkler for å knytte tabellene sammen?
 
-- I country kan vi bruke
+- Vi kan koble primærnøkkelen "Code" fra country til sekundærnøkklene "CountryCode" fra city og "CountryCode" fra countrylanguage.
