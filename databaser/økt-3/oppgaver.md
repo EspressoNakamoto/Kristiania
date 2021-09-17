@@ -112,6 +112,69 @@ DROP COLUMN EPost;
 
 10. Lag en tabell tilsvarende den i punkt 1 som heter personCopy. (Du trenger ikke kopiere data inn i den.) Sjekk at denne er opprettet, før du sletter den igjen. (Poenget er å få testet kommandoen for å slette tabell, uten å ødelegge de to fine tabellene du har jobbet med en stund nå.)
 
-```sql
+Opprette tabell:
 
+```sql
+CREATE TABLE personCopy (
+	data int -- Fordi vi ikke kan ha tom tabell
+)
 ```
+
+Slette tabell:
+
+```sql
+DROP TABLE personCopy;
+```
+
+11. VANSKELIG: Hvis vi henter ut navn og fødselsdato fra person tabellen, kommer dato på MySQL sitt for oss "baklengsformat". Omformater output så dato har formatet: 31-01-2001. (<--Eksempel på dato med rett format.)
+
+    Tips: Les om(w3schools eller google) MySQL funksjonen: DATE_FORMAT()
+
+    Legg også inn dato for Ola Nordmann. Han skal ha fødselsdatoen 20.02.1912 (gammel mann!). Skriv den inn på dette formatet, men bruk STR_TO_DATE() så MySQL skjønner hvilket format datoen kommer på.
+
+Hente navn og endre format på dato:
+
+```sql
+SELECT Navn, DATE_FORMAT(Fødselsdato, '%d-%m-%Y') AS Fødselsdato
+FROM person;
+```
+
+Legg inn dato:
+
+```sql
+UPDATE person
+SET Fødselsdato = STR_TO_DATE('20 02 1912', '%d %m %Y')
+WHERE Navn = 'Ola Nordmann';
+```
+
+---
+
+Skriv SQL mot world databasen (schema) som utfører følgende:
+
+12. Benytt max()-funksjonen til å hente ut den største ID-en i world.city. SELECT \* fra information_schema.tables for world-databasen (WHERE table_schema = 'world'). Kan du finne hvor mange rader du har i de ulike tabellene dine? Hva heter kolonnen som angir dette? Kan du finne kolonnen som gir oss neste verdi for `city.ID`?
+
+Hente største ID fra city tabellen
+
+```sql
+SELECT MAX(ID) AS Størst_ID
+FROM city;
+```
+
+Vi kan finne antall rader vi har i de ulike tabellene ved å se på TABLE_ROW kolonnen. Vi finner også neste verdi for `city.ID` i AUTO_INCREMENT kolonnen.
+
+13. Slett raden som inneholder byen 'Bærum'fra citytabellen.(Dette er ingen by, og skal ikke ligge i city tabellen!)
+
+```sql
+DELETE FROM city
+WHERE Name = 'Bærum';
+```
+
+14. Skriv en passende spørring for å se at data er slettet som forventet. Undersøk om lærebok har rett når den skriver(s.79): «MySQLhar fra versjon 8 støtte for CHECK-regler. Eldre versjoner godtok at man skrev CHECK, men sjekketikke regelen.» Hvordan kan du undersøke om utsagnet er riktig(for din versjon)? Del svaret ditt (og hvordan du kom fram til det) i Mattermost!
+
+```sql
+SELECT *
+FROM city
+WHERE Name = "Bærum";
+```
+
+Siden ingenting kommer opp så får vi vite at bærum raden har blitt slettet.
