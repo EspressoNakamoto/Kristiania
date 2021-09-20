@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STRONGiSTRONG</title>
+    <title>500 tilfeldige tall</title>
 </head>
 <body>
     <p id="output-p"></p>
@@ -12,12 +12,8 @@
     <script>
         var outputP = document.getElementById("output-p");
 
-        for(var number = 0; number <= 100; number++){
-            if (number > 30 & number < 70) {
-                outputP.innerHTML += `<strong>${number} </strong>`;
-            } else {
-                outputP.innerHTML += `${number} `;
-            }
+        for (let number = 0; number < 500; number++) {
+            outputP.innerHTML += `${Math.floor(Math.random(number) * 100)} `
         }
     </script>
 </body>
