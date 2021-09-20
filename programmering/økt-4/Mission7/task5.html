@@ -11,8 +11,13 @@
 
     <script>
         var outputP = document.getElementById("output-p");
-        
 
+        for(var number = 0; number <= 100; number++){
+            outputP.innerHTML += `${number} `;
+            if (number > 30 && number < 70) {
+                outputP.innerHTML = `<strong>${number}</strong>`;
+            }
+        }
     </script>
 </body>
 </html>
