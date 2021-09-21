@@ -4,23 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruker bestemmer løkken</title>
+    <title>Document</title>
 </head>
 <body>
     <ul id="output-list"></ul>
 
     <script>
         var outputList = document.getElementById("output-list");
-        var wantsToContinue = true;
+        var inputList = prompt("Hvor lange lister ønsker du?");
         
-        while (wantsToContinue) {
-            var userInput = prompt("Hvor lange lister ønsker du?");
-            
-            if (userInput === "" || word === null) {
-                wantsToContinue = false;
-            } else {
-                userInput.innerHTML
-            }
+        for (number = 1; number <= inputList; number++) {
+            outputList.innerHTML += `<li>${number}</li>`;
         }
     </script>
 </body>
