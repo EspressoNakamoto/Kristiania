@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodetid 2</title>
+    <style>
+        p.question {
+            background-color: blue;
+        }
+        div.question {
+            background-color: red;
+        }
+        div.question + div.question {
+            background-color: brown;
+        }
+        div.question:nth-child(odd) {
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="question">Hva er jeg?</h1>
+    <p class="question">Jeg er hva?</p>
+    <div class="question">Hei</div>
+    <div class="question">Jeg</div>
+    <div class="question">Er</div>
+    <div class="question">Div</div>
+</body>
+</html>

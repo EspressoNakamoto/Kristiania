@@ -1,0 +1,85 @@
+1)	Datamaskinens bruksområder
+a.	Forklar kort hva et PC-system er.
+- Et PC-system er en sammensetning av komponenter hvor hvis man endrer en komponent, så medfører det en endring i andre komponenter.
+
+b.	Gjør din egen definisjon av hva «informasjon» er i datasammenheng.
+- Informasjon er data som kan bli forstått i en sammenheng. Data kan være tall i en tabell, men vi vet ikke hva tallene betyr. Men hvis overskriften til tabellen er populasjon, så for man mer informasjon.
+
+c.	Nevn noen bruksområder for datamaskiner. Bruk gjerne eksempler fra din egen hverdag. Hva er de viktigste hovedmomentene ved datamaskinene du har i din egen hverdag?
+- Datamaskiner kan bli brukt til å kalkulere ting i f.eks. kalkulator, eller dekode en videofil fra YouTube. Men datamaskiner rangerer helt fra smartklokken som bare viser klokken og apper, til supermaskiner som kalkulerer komplekse simulasjoner medisinsk forskning.
+
+d.	Forklar med egne ord forskjellene mellom det binære tallsystemet og titall-systemet. Bruk gjerne tegninger for å vise hva du mener.
+- Titallsystemet er vet vi normalt er kjent med 1, 2, 3 osv. Men det binære tallsystemet har bare 2 tall som kan vises per siffer, 0 og 1. Et binært siffer kalles bit (binary digit), og en gruppe av 8 binære sifre kalles byte(B). Vi teller binære tall forskjellig ifra titallsystemet. Å telle til fem i titallsystemet er 1, 2, 3, 4, 5. Å telle til fem med binærtall er 0, 01, 10, 11, 100. Så tallet vi får er kombinasjonen av binærtall i riktig rekkefølge.
+
+e.	Skriv ned tallene 1 – 15 på det binære tallsystemet.
+- 0, 01, 10, 11, 100, 101, 110, 111, 1000, 1001, 1010, 1011, 1100, 1101, 1110.
+
+f.	Hvorfor bruker datamaskiner det binære tallsystemet og ikke titalls-systemet?
+- Det kommer ned til kostnader og pålitelighet. Jo fler tall, jo mer nøyaktig må kretsene være. Hvis det er bare 2 tall å velge mellom så er det større margin for feil og vi trenger enkle kretser som betyr billige kretser.
+
+2)	Datamaskinens bestanddeler
+a.	Tegn opp Von-Neumann modellen og delene den består av.
+    - Se /von-neumann-modell.jpg
+
+b.	Hvor mange lag har en funksjonsorientert modell mot en maskinvareorientert modell?
+- En funksjonsorientert modell har seks lag, fra lag 0 til lag 5. Lag 0-2 er maskinvare og 3-5 er programvare. Maskinvareorientert modell har bare 3 lag, port-nivå, register-nivå og prosessor-nivå.
+
+c.	Gi et par eksempel på maskinvare.
+- Maskinvare er fysisk, bærbar PC, CPU, minne, kretser, minnepenn osv.
+
+d.	Gi et par eksempel på programvare.
+- Programvare er det som kan kjøre på maskinvare, operativsystem som Windows 10 og Linux, eller applikasjoner som Excel og Photoshop.
+
+e.	Hvorfor kallen «hjernen» i en datamaskin CPU eller «Central Processing Unit», og hvordan gir man den instruksjoner.
+- CPU blir kalt datamaskinens «hjerne» fordi det er hovedmotoren i en datamaskin. Det er den som utfører instruksjoner som den henter fra minnet (RAM). Man gir den instruksjoner ved programmering. F.eks. et program som gir den instruksjoner ved hjelp av programmeringsspråk.
+
+f.	Skriv om tre valgfrie typer av minne. Brukt gjerne andre kilder enn forelesningene for å finne informasjon.
+- RAM (Random Access Memory) er minne som blir brukt til å lagre data mens datamaskinen er på. Den typen minne blir også kalt «volatile» fordi dataen som blir lagret på den, vil bli slettet når den ikke er koblet til strøm.
+DRAM (Dynamic Random Access Memory) er en type RAM hvor den ikke kan holde på data for lenge, så den trenger å bli oppdatert eller ladet opp igjen etter en bestemt tid for å holde på dataene. Fordelen med DRAM er at designen er simpelt, lavt strømforbruk, bit per chip tettheten er lav, og kostnaden per bit er relativt lav. Det gjør at DRAM er ganske rimelig. Men DRAM mister også dataene hvis den er koblet av strøm, og DRAM er relativt tregere i drift enn SRAM.
+SRAM (Static Random Access Memory) er en annen type RAM som er raskere, men lagringskapasiteten er lavere og er dyrere enn DRAM. Fordelen med SRAM er at den er raskere enn DRAM siden den ikke trenger å bli oppdatert.
+ROM (Read-Only Memory) er en «non-volatile» minne som vil si at den ikke mister data når strømmen er av. ROM kan bare bli lest fra og ikke bli skrevet til. Dataene som er på ROM, blir skrevet på når den blir produsert og kan ikke bli endret i ettertid.
+
+g.	Hva er forskjell på minne og masselager?
+- Minne for midlertidig lagring av små datamengder mens masselager blir brukt for permanent lagring av store datamengder. Minne er også mye raskere enn masselager. Minne er f.eks. RAM og ROM, mens masselager kan være en HDD eller en CD.
+
+h.	Prøv å finne info om komponentene på din egen datamaskin. Eks. Hvor mye plass har du på din harddisk eller hvilken type CPU har du?
+- CPUen er en Intel Core i5-8250U med kodenavn «Kaby Lake-R U4+2» og har 4 cores og 8 threads. CPUen har en integrert GPU i seg og heter Intel UHD Graphics 620. Men PCen har også en dedikert GPU som er en NVIDIA GeForce MX150. Som lagringsplass har den en NVMe fra LITEON som har en lagringskapasitet på 256 GB.
+i.	Forklar hva et abstraksjonsnivå er, og hensikten med det.
+- 
+
+j.	Forklar kort hva et operativsystem er.
+- Et operativsystem er et program på instruksjonsnivået som får applikasjonen og maskinvaren til å kommunisere med hverandre gjennom operativsystemet.
+
+3)	Passord
+a.	Forklar kort hva bitstyrke er og hvorfor det er viktig i passordsammenheng.
+- Bitstyrke er en måte å måle kvaliteten på ett passord. Man regner ut bitstyrken for å se hvor mange ganger maximalt passordet må bli gjettet med «brute force» metoden.
+
+b.	Hva er brute-force.
+- Brute-force er en av metodene som angripere kan bruke på å finne ut passordet på. Metoden går ut på at den vil prøve alle mulige kombinasjoner hvor den starter med ett siffer til den finner ut hele passordet.
+
+c.	Er et passord som inneholder åtte bokstaver nødvendigvis sikkert?
+- Et passord som inneholder åtte bokstaver er ikke nødvendigvis sikkert. Hvor sikkert et passord er kommer an på bitstyrken. Anbefalt bitstyrke i våre dager er ca 80, som er ca tolv bokstaver og tegn.
+
+d.	Hva er tiltak man kan gjøre for at et passord blir sterkere?
+- Et lengre passord og bruk av flere symboler vil gjøre passordet sterkere. Sterke passord bør inneholde tegn fra minst tre av gruppene: små bokstaver, store bokstaver, tall, symboler og Unicode-tegn.
+
+e.	Sorter passordene under etter styrke, start med den som er minst sikker. Bruk f.eks. Microsoft sin passordsjekker til å teste svarene dine: 
+- qwerty, password123, iliketoast, jegelskerågåturiskogenpålørdager
+
+4)	Historie
+a.	Skriv om de tre historiske problemstillingene den moderne datamaskinen løser.
+- Beregningsproblemet er ett av problemstillingene den moderne datamaskinen løser. Datamaskiner kan utføre kompliserte beregninger raskt og pålitelig. Den regnemaskinen var Abacus (ca -3500) så fikk vi «Tabeller», «Tannhjul-maskiner», mekaniske og elektromekaniske. Nå bruker vi elektroniske regnemaskiner som kalkulator.
+Massedataproblemet løste den morderne datamaskinen ved å kunne lagre og behandle store mengder data. Vi hadde hullkort I 1890 som vi kunne bruke til å ha folketelling. Men med moderne datamaskiner kan vi lagre store mengder og forskjellige typer data.
+Den moderne maskinen løste også reguleringsproblemet for å styre og automatisere industrielle prosesser. Første versjonen vi hadde var Jacqard-veven som automatiserte hullkort. Så kom Maxwell, Norbert Wiener og mikrokontrollere. I dag blir mikrokontrollere brukt overalt i alt elektronikk vi bruker.
+
+b.	Hva er Moore’s lov og hva beskriver den? Vil den for alltid være sann?
+- Moore’s lov beskriver at antall transistorer på et areal dobles hvert andre år. Men det spåes at Moores lov kommer til å nå punktet hvor fysiske lover begrenser gjyldigheten.
+c.	Hva er Intel 4004, og hvilken generasjon hørte den til?
+- Intel 4004 er en mikroprosessor som tilhørte generasjon 1971-1981. Intel 4004 kon ut i 1971 og er regnet for å være den første kommersielle, integrerte mikroprosessoren.
+
+d.	Hva beskriver Wirth’s lov?
+- Wirth’s lov er et ordtak som beskriver at programvare blir tregere fortere enn hardware blir raskere. Ordtaket ble gitt navnet etter Niklaus Wirth som diskuterte det i hans 1995 artikkel «A Plea for Lean Software».
+
+5)	Binær koding
+a.	Trening til neste økt, fortsett å skrive ned tall på det binære tallsystemet opp til 128: 1, 2, 4, 8…
+- 1, 2, 4, 8, 16, 32, 64, 128.

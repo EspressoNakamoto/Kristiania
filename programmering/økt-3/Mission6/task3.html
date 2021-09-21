@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byer i Europa</title>
+</head>
+<body>
+    <h1>Hvilke byer i Europa husker du?</h1>
+    <input id="button-press" type="button" value="Legg til by">
+    <ul id="list"></ul>
+
+    <script>
+        var buttonPress = document.getElementById("button-press");
+        var listAdd = document.getElementById("list");
+
+        function askUser() {
+            var cityAdd = prompt("Tast inn navnet på en by i Europa");
+            listAdd.innerHTML += `<li>${cityAdd}</li>`;
+        }
+
+        buttonPress.onclick = askUser;
+    </script>
+</body>
+</html>

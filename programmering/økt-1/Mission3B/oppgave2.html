@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="med"></p>
+    <p id="uten"></p>
+    <img src="/smile.jfif" alt="smile" id="img">
+    <script>
+        var med = document.getElementById("med");
+        var uten = document.getElementById("uten");
+
+        var number1 = prompt();
+        var number2 = prompt();
+        
+        var result = number1 + number2;
+        var rightresult = Number(number1) + Number(number2);
+        
+        med.innerHTML = `Resultat med Number(): ${rightresult}`;
+        uten.innerHTML = `Resultat uten Number(): ${result}`;
+    </script>
+</body>
+</html>

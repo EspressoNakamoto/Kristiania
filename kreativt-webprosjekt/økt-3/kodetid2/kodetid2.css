@@ -1,0 +1,8 @@
+body {
+    background-color: grey;
+}
+
+p, h1 {
+    font-family: cursive;
+    margin: 100px 50px 0 50px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???</title>
+</head>
+<body>
+ 
+    <h3>Handleliste for arrangement</h3>
+    <h4 id="output-h4"></h4>
+    <ul id="output-ul"></ul>
+    <!-- ul er HTML for å lage lister -->
+
+    <script>
+        // Get HTML elements h4 and ul
+        var outputH4 = document.getElementById("output-h4");
+        var outputP = document.getElementById("output-ul");
+
+        // Variables on different items including arranger and amount of guests
+        var arranger = "Dan Abramov";
+        var numberofpizzas;
+        var numberofsodas;
+        var numberofchocolates
+        var numberofguests;
+
+        // Prompt asks user how many guests
+        numberOfGuests = prompt("Hvor mange gjester er det?");
+
+        // Calculation of how much of each items
+        numberOfPizzaSlices = numberOfGuests * 4;
+        numberOfSodas = numberOfGuests * 2;
+        numberOfChocolates = numberOfGuests * 5;
+
+        // Output amount of guests to h4
+        outputH4.innerHTML = `Det er ${numberOfGuests}gjester.`;
+
+        // Output to list
+        outputP.innerHTML = `
+            <li>Antall pizzaer: ${numberOfPizzaSlices}</li>
+            <li>Antall colaer: ${numberOfSodas}</li>
+            <li>Antall sjokolader: ${numberOfChocolates}</li>
+        `; 
+    </script>
+
+</body>
+</html>

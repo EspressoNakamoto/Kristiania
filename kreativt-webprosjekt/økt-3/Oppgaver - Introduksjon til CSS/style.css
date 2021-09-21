@@ -1,0 +1,53 @@
+body {
+  background-color: lightgray;
+}
+
+header {
+  background-color: midnightblue;
+}
+
+h2 {
+  font-size: 30px;
+  color: lightblue;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: ghostwhite;
+}
+
+h1,
+h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+main {
+  background-color: white;
+  margin: 50px 200px 50px 200px;
+  padding: 30px;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+article {
+  margin: 50px;
+}
+
+.forfatter {
+  text-align: right;
+  font-style: italic;
+  margin-bottom: 50px;
+}
+
+#post1 {
+  border-bottom: 2px lightblue dotted;
+}
