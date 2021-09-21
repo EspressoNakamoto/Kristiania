@@ -173,3 +173,12 @@ Konverter desimaltallene under til binærtall på toerkomplementmed 8 bits presi
 ### Subtraksjon og toerkomplement
 
 Subtraher tallene under ved hjelp av toerkomplement med 8 bits presisjon. Oppgi svaret i binærtall (base 2) og vis utregning. Bruk penn og papir.
+
+Se [PDF](subtraksjon-og-toerkomplement.pdf)
+
+---
+
+### Heksdesimal
+
+1. Hvorfor bruker vi heksadesimale tall?  
+   Fordi
