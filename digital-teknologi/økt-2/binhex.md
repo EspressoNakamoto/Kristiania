@@ -55,6 +55,8 @@
    4⁹ = 262 144  
    4¹⁰ = 1 048 576
 
+---
+
 ### Konvertering
 
 1. Konverter disse tallene fra binærtall(base 2) til desimaltall(base 10)
@@ -79,6 +81,8 @@
 - 32 = 0010 0000
 - 256 = 0001 0000 0000
 
+---
+
 ### Addisjon binært
 
 1. Adder disse tallene, bruk en byte (8 bit) presisjon.
@@ -101,6 +105,8 @@
 - 0001 0111 0110 1001 + 0010 1010 1001 = 0001 1010 0001 0010
 - 1111 0101 0001 + 0100 0110 1101 0011 = 0101 0110 0010 0100
 - 1010 0110 1101 1010 + 0101 1010 0110 1111 = 0000 0001 0100 1001
+
+---
 
 ### Enerkomplement og toerkomplement
 
@@ -137,6 +143,33 @@
 9. Forklar og vis med eksempler hva overflow er, i 8 bits presisjon.  
    Overflow er når man driver med en spesifik presisjon og man får ett tall høyere en angitt presisjon. F.eks i 4 bit presisjon: 1111 + 0001 = 0001 fordi uten presisjon ville svaret blitt 0001 0000 som er 8 bit.
 
+---
+
 ### Konvertering toerkomplement
 
 Konverter binærtallene på toerkomplement med 8 bits presisjon under til desimaltall. Bruk penn og papir.
+
+1. 1111 1111 = (-128) + 64 + 32 + 16 + 8 + 4 + 2 + 1 = -1
+2. 0000 1000 = 8
+3. 1000 0000 = -128
+4. 1110 0000 = (-128) + 64 + 32 = -32
+5. 0010 0000 = 32
+6. 0110 0010 = 64 + 32 + 2 = 98
+7. 1100 1000 = (-128) + 32 + 8 = -56
+8. 1111 0111 = (-128) + 64 + 32 + 16 + 4 + 2 + 1 = -9
+
+Konverter desimaltallene under til binærtall på toerkomplementmed 8 bits presisjon. Bruk penn og papir.
+
+1. 10 = (-128) + 8 + 2 = 0000 1010
+2. -8 = (-128) + 64 + 32 + 16 + 8 = 1111 1000
+3. -77 = (-128) + 32 + 16 + 2 + 1 = 1011 0011
+4. 69 = 64 + 4 + 1 = 0100 0101
+5. -42 = (-128) + 64 + 16 + 8 = 1101 1000
+6. -153 = Ingen løsning, tallet er utenfor presisjon som er oppgitt
+7. -12 = (-128) + 64 + 32 + 16 + 4 = 1111 0100
+
+---
+
+### Subtraksjon og toerkomplement
+
+Subtraher tallene under ved hjelp av toerkomplement med 8 bits presisjon. Oppgi svaret i binærtall (base 2) og vis utregning. Bruk penn og papir.
