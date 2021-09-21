@@ -1,2 +1,0 @@
-# Kristiania
-Schoolwork
