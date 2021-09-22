@@ -259,4 +259,8 @@ Se [PDF](subtraksjon-heksadesimal.pdf)
 2. Skriv ditt eget navn i heksadesimal fra ASCII tabellen på både store og små bokstaver.  
    0x50 65 74 65 72 20 54 76 65 69 74
 
-3. Hva er forskjellen på 0x41 og 0x61?
+3. Hva er forskjellen på 0x41 og 0x61?  
+   0x41 er "A" og 0x61 er "a". Så forskjellen er at det er stor bokstav og liten bokstav.
+
+4. Hva har binærtallet 0000 1000 som ASCII kode, binært?  
+   0000 1000 = 8. 8 er 0x28. 0x38 = 0011 1000. Så 0000 1000 som ASCII kode er 0011 1000 binært.
