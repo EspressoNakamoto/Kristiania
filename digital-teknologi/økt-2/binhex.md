@@ -178,7 +178,85 @@ Se [PDF](subtraksjon-og-toerkomplement.pdf)
 
 ---
 
-### Heksdesimal
+### Heksadesimal
 
 1. Hvorfor bruker vi heksadesimale tall?  
-   Fordi
+   Fordi vi kan skrive binærtall mer kompakt.
+
+2. Hva er prefix-en for heksadesimale tall?  
+   Prefiks-en for heksadesimale tall er 0x, f.eks. **0x**7F = 127 = **0b**0111 1111.
+
+3. Hvor stor er en nibble?  
+   En nibble er en gruppe med fire binærtall eller fire bits.
+
+4. Skriv alle tall sifrene i det heksadesimale tallsystemet.  
+   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.
+
+5. Hvor mange heksadesimale siffer trenger man for å representere 16 bit?
+   Man trenger 2 heksadesimale siffer for å representere 16 bit. Siden F er det høyeste som er 15.
+
+---
+
+### Konvertering heksadesimal
+
+Konverter tallene under fra det binære tallsystemet (base 2) til det heksadesimale tallsystemet (base 16).
+
+1. 1000 = 0x8
+2. 0010 1101 = 0x2D
+3. 0101 1100 = 0x5C
+4. 1110 1110 = 0xEE
+
+Konverter tallene under fra det heksadesimale tallsystemet (base 16) til det binære tallsystemet (base 2).
+
+1. 0x2 = 0010
+2. 0xFF = 1111 1111
+3. 0xD3 = 1101 0011
+4. 0x5F = 0101 1111
+
+Konverter tallene under fra det heksadesimale tallsystemet (base 16) til det desimale tallsystemet (base 10).
+
+1. 0x3 = 0010 = 3
+2. 0xAB = 1010 1011 = 171
+3. 0xFF = 1111 1111 = 255
+4. 0x01 = 0000 0001 = 1
+
+Konverter tallene under fra det desimale tallsystemet (base 10) til det heksadesimale tallsystemet (base 16).
+
+1. 7 = 0111 = 0x7
+2. 130 = 1000 0010 = 0x82
+3. 54 = 0011 0110 = 0x36
+4. 23 457 = 0101 1011 1010 0001 = 0x5BA1
+
+---
+
+### Addisjon heksadesimal
+
+Legg sammen tallene, og oppgi svaret på base 16 (heksadesimalt), bruk penn og papir. (Flere konverteringer kan være nødvending underveis)
+
+Se [PDF](addisjon-heksadesimal.pdf)
+
+---
+
+### Subtraksjon heksadesimal
+
+Subtraher tallene, og oppgi svaret på base 16 (heksadesimalt), bruk penn og papir. (Flere konverteringer kan være nødvendig underveis)
+
+Se [PDF](subtraksjon-heksadesimal.pdf)
+
+---
+
+### ASCII
+
+1. Bruk ASCII-tabellen og finn disse tegnene. Hva er heksadesimale tallet til hvert tegn?
+
+- G - 0x47
+- % - 0x25
+- = - 0x3D
+- } - 0x7D
+- h - 0x68
+- q - 0x71
+
+2. Skriv ditt eget navn i heksadesimal fra ASCII tabellen på både store og små bokstaver.  
+   0x50 65 74 65 72 20 54 76 65 69 74
+
+3. Hva er forskjellen på 0x41 og 0x61?
