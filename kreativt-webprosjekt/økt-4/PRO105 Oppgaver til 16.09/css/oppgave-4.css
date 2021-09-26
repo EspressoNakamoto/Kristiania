@@ -1,0 +1,28 @@
+#box1,
+#box2,
+#box3 {
+  display: block;
+  background-color: grey;
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+#box4,
+#box5,
+#box6 {
+  display: inline;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+#box7,
+#box8,
+#box9 {
+  display: inline-block;
+  background-color: pink;
+  border: 1px solid black;
+  padding: 17px 45px;
+  margin: 5px;
+}

@@ -1,0 +1,13 @@
+section {
+  border: 2px dashed black;
+  height: 110px;
+  padding: 10px;
+}
+
+div {
+  background-color: pink;
+  border: 2px solid black;
+  height: 100px;
+  width: 100px;
+  float: right;
+}

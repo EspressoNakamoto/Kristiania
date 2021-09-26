@@ -69,33 +69,33 @@
     Ja, fordi man kan bruke f.eks. `margin-top` istedenfor bare `margin`. Og vi har det for alle sider, top, right, bottom og left. Det fins properties for alle sider i boks-modellen.
     Eksempel:
 
-        ```css
-        /* Istedenfor */
-        img {
-            margin: 10px;
-        }
-        /* Bruk */
-        img {
-            margin: 10px 20px 30px 40px;
-        }
-        /* Eller */
-        img {
-            margin-top: 10px;
-            margin-bottom: 20px;
-            margin-left: 30px;
-            margin-right: 40px;
-        }
-        ```
+    ```css
+    /* Istedenfor */
+    img {
+      margin: 10px;
+    }
+    /* Bruk */
+    img {
+      margin: 10px 20px 30px 40px;
+    }
+    /* Eller */
+    img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-left: 30px;
+      margin-right: 40px;
+    }
+    ```
 
 21. Kan man sette forskjellige farger på forskjellige sider av en border for eksempel at border på toppen av et element er rød og border på bunn er blå?  
     Ja, man må definere hvilken side man vil ha rød og blå på.
 
-        ```css
-        img {
-            border-top: solid red;
-            border-bottom: solid blue;
-        }
-        ```
+    ```css
+    img {
+      border-top: solid red;
+      border-bottom: solid blue;
+    }
+    ```
 
 22. Kan et HTML-element ha flere klasser?
     Ja, i forhold til id hvor man bare kan ha en unik id, kan man ha flere klasser av samme navn.

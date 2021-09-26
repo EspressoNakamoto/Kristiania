@@ -1,0 +1,56 @@
+.container {
+  border: 2px dashed black;
+  width: 800px;
+  height: 700px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.rectangle {
+  background-color: orange;
+  border: 2px solid black;
+  width: 700px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#Box1 {
+  top: 20%;
+}
+
+#Box2 {
+  top: 80%;
+}
+
+.square {
+  border: 2px solid black;
+  width: 250px;
+  height: 300px;
+  position: absolute;
+}
+
+#Box3 {
+  background-color: purple;
+  top: 2%;
+  left: 2%;
+}
+
+#Box4 {
+  background-color: red;
+  z-index: 2;
+  top: 55%;
+  left: 55%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#Box5 {
+  background-color: green;
+  z-index: 1;
+  top: 65%;
+  left: 70%;
+  transform: translateX(-50%) translateY(-50%);
+}
