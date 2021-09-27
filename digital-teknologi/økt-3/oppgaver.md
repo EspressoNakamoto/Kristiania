@@ -28,15 +28,29 @@
 6.  Hvorfor bruker ASCII kun syv bit?  
     For å unngå forvirring rundt positive og negative tall.
 
-7.  Bruk ASCII-tabellen til åsortere tegnene under i riktig rekkefølge. Det med minst tallverdi i tabellen til venstre, høyest verdi til høyre.
-    A
-    2
-    ;
-    ">"
-    R
-    Y
-    V
-    !
+7.  Bruk ASCII-tabellen til åsortere tegnene under i riktig rekkefølge. Det med minst tallverdi i tabellen til venstre, høyest verdi til høyre.  
+    A 
+    2 
+    ; 
+    ">" 
+    R 
+    Y 
+    V 
+    ! 
     $
+    
+    = !, $, 2, ;, >, A, R, V, Y
 
-8.
+8.  Parr tegnene til venstre med sine respektive ASCII-koder(Desimal).  
+    A = 65  
+    D = 68  
+    y = 121  
+    "+" = 43  
+    / = 47
+
+---
+
+### UNICODE
+
+1.  Skriv kort om UTF-8 og UTF-16, og forklar forskjellen mellom de.  
+    
