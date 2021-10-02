@@ -94,4 +94,29 @@
     En mikrokontroller er en mini-pc som konfigureres for å gjøre en spesifik ting. En mikroprosessor er i alle elektroniske ting som vaskemaskiner, routere, radioer, bankkort osv.
 
 5.  Skriv kort om x86 instruksjonssett.  
-    x86 blir brukt brukt på prosessorer med CISC arkitektur
+    x86 blir brukt brukt på prosessorer med CISC arkitektur som er utviklet av Intel. x86 instruksjonssett er en liste over instruksjoner som en prosessor can utføre. I x86 finns det instruksjoner for data flytting(mov, push, pop), kontrolloverføring(je, jg, jmp, call, ret), aritmetikk/logisk(cmp, add, sub osv.), input/output og debug og interrupt håndtering(int, sti, hlt, nop). Det finnes også egne instruksjoner for flyttall, SIMD vektor og matriseinstruksjoner og egne instruksjoner for å endre prosessortilstand.
+
+---
+
+### Teknikker og begreper
+
+1.  Hva er forskjellen på en system-klokke og en vanlig klokke.  
+    En system-klokke holder bare takten, den viser ikke tiden som en vanlig klokke.
+
+2.  Når du kjører et program på en datamaskin, hvor ligger det fulle programmet?  
+    Når du kjører et program på datamaskinen vil du ta fra programmet som er lagret på HDD/SSD og kjøre programmet på RAM. Videre vil CPU-en få instruksjoner og data fra RAM via north bridge.
+
+3.  Hvorfor har en CPU flere kjerner?  
+    For å kunne kjøre programmer parallelt. Men det kan bare mulig hvis programmet har blit programmert sånn at det kan parallelliseres og ikke at den kan bare kjøres sekvensielt.
+
+4.  Hva representerer minnehierarkiet?  
+    Minnehierarkiet er for å få en forståelse på hvilket type minne som kan bli brukt for å oppnå mest effektivitet, mest sparsom eller enkel å eksessere.
+
+5.  Ut ifra minnehierarkiet hva slags type lagring ville du brukt om du skulle lagret noe du bare trenge tilgang til hvert 5. år.  
+    Jeg hadde brukt offline type lagring som en minnepenn eller harddisk. Minnepenn hvis det er lite data eller harddisk for større data.
+
+6.  Hva brukes cache-minnet til?  
+    Cache-minnet brukes for raskt tilgjengelighet. Når programmer kjøres, blir ca. 5% av koden kjørt ca. 95% av tiden. Så instruksjoner som skal utføres er lagret i cache i den rekkefølgen de skal utføres. Det medfører at det blir raskere å gjennomføre instruksjonene neste gang de kjøres. Vanlighvis vil cache også lagres i raskere lagring for raskere tilgjenglighet f.eks. på CPU-en.
+
+7.  Hva går en CPU gjennom for å hente data fra RAM-en.  
+    CPU-en må gå gjennom north bridge for å hente data fram RAM-en.
