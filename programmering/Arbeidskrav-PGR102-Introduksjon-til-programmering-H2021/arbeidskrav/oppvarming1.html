@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppvarming 1</title>
+</head>
+<body>
+    
+    <!-- Det er lov å endre HTML og id'er -->
+    <input id="add-images-btn" type="button" value="Legg til bilder">
+    <p>Antall bilder: <span id="number-of-images-span">0</span></p>
+    <div id="output-div"></div>
+
+    <script>
+        var addImageBtn = document.getElementById("add-images-btn");
+        var numberSpan = document.getElementById("number-of-images-span");
+        var outputDiv = document.getElementById("output-div");
+
+        var images = ["person1.jpg", "person2.jpg", "person3.jpg", "person4.jpg"]
+        
+        function numberOutput() {
+            numberSpan.innerHTML = null;
+            outputDiv.innerHTML = null;
+            
+            var numberOfImages = Math.floor(Math.random() * 100)
+            
+            numberSpan.innerHTML = numberOfImages;
+            
+            function changeNumber() {
+                var numberPerson = Math.floor(Math.random() * 4);
+                outputDiv.innerHTML += `
+                    <img src="images/${images[numberPerson]}">
+                `;
+            }
+            
+            for (var i = 0; i < numberOfImages; i++) {
+                changeNumber();
+            }
+        }
+
+        addImageBtn.onclick = numberOutput;
+    </script>
+
+</body>
+</html>

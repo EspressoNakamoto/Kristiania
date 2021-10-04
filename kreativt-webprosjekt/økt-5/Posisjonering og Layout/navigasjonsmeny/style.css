@@ -1,0 +1,19 @@
+#nav {
+  width: 500px;
+  height: 30px;
+  margin: auto;
+  background-color: grey;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: "Courier New", Courier, monospace;
+}

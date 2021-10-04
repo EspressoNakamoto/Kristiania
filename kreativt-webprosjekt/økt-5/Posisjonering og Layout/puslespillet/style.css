@@ -1,0 +1,51 @@
+.gameBoard {
+  position: relative;
+}
+
+.gamePiece {
+  position: absolute;
+}
+
+#piece2 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#piece3 {
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+#piece4 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#piece5 {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#piece6 {
+  top: 50%;
+  left: 100%;
+  transform: translateX(-100%) translateY(-50%);
+}
+
+#piece7 {
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+#piece8 {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+#piece9 {
+  top: 100%;
+  left: 100%;
+  transform: translateX(-100%) translateY(-100%);
+}
