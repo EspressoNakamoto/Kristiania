@@ -40,4 +40,59 @@
     Man skal kjøre i kjernemodus når man vil ha tilgang til hele minnet og alle instruksjoner. F.eks. OS må ha tilgang til hele minnet når den skal gi et program en del av minnet.
 
 5.  Hva er en prosess og en tråd, og hva er forskjellen mellom de?  
-    
+    En prosess er et program som kjører med tilhørende ressurser. En tråd er selve kjøringen av instruksjoner. Ett program kan bruke flere tråder.
+
+6.  Hvilket/hvilke program på din datamaskin bruker mest av maskinen sin CPU akkurat nå?  
+    Jeg bruker linux så jeg bruker `top` commandoen. Det er chrome som bruker mest CPU på datamaskinen min nå.
+
+7.  Hvorfor bruker operativsystemet Multitasking og hvordan fungerer kommunikasjonen her mellom OS og CPU? Hvordan hadde datamaskinen vært hvis det ikke fantes Multitasking?  
+    Operativsystemet bruker Multitasking for å kunne kjøre flere prosesser "samtidig". CPUen kan bare behandle en instruksjon fra en prosess om gangen. Så OS må bestemme hvilken prosess som kan kjøre på CPUen på enhver tid. Uten Multitasking så kunne maskinen bare kjørt et program om gangen 
+
+8.  Hvilke tre ulike states finnes i "Context switching"?  
+    CPU-bytten mellom prosesser heter context switching. Det fungerer med at en prosess går gjennom:
+
+    1. Running: Kjører nå
+    2. Blocked: Venter på å bli aktivisert
+    3. Ready: Aktivisert og venter i kø
+
+    Og sånn går det i syklus.
+
+9.  Hva skjer hvis RAM-minnet ikke er stort nok?  
+    Hvis ram minnet ikke er stort nok, vil operativsystemet bruke diskplass for å ha dataene som skulle ha vært i RAM ("Swapping"). Det er derfor når man går full for RAM så begynner ting å gå tregt. Når det legges over til disken.
+
+10. Hvordan vet Operativsystem hvilken tråd som skal kjøres når?  
+    Operativsystemet bruken en kjøreplan(schedule) for å bestemme hvilken tråd som skal kjøres. Siden context switching tar tid, finnes det to overordnede kjøreplan-prinsipper:
+
+    - Ikke-preemtiv(frivillig)
+        - Tråden som er kjører setter seg selv til ready (yield-instruksjon)
+        - Høflighets-metoden
+    - Preemtiv.
+        - Klokkestyrt avbrudd sørger med gjevne mellomrom for at tråden som kjører settes til ready.
+        - Power-metoden
+
+11. Hvilken ulike deler har prosessen (tråden) i sitt minne?  
+    En prosess ligger i minne og har en sammenhengende minneomeråde.  
+    De ulike delene fra lav adresse til høy adresse:
+
+    - TEXT(code) segment (kompilerte koden)
+        - Lest fra program fil f.eks. av exec
+        - Vanlighvis read-only
+        - Kan deles av flere tråder
+    - DATA segment (Hardkoden til applikasjonen)
+        - Initialiserte globale variabler (0 / NULL)
+        - Uninitialiserte globale variabler
+        - heap
+            - dynamisk minne f.eks. allokert med `malloc`
+            - vokser nedover
+    - STACK segment [ligger i motsatt ende] (Når programmet starter en funksjon, vil det legge en stack med minne)
+        - Variabler i en funksjon
+        - Lagrede registertilstander (kallende funksjons EIP)
+        - Vokser nedover
+    - System data segment(PCB)
+        - Segment pekere
+        - pid
+        - program og stack pekere
+    - Flere stacker for trådene (Legges under stack)
+
+12. Sant/Usant: Heapen i prosessen sitt minne er dynamisk.  
+    Sant, fordi
