@@ -95,4 +95,51 @@
     - Flere stacker for trådene (Legges under stack)
 
 12. Sant/Usant: Heapen i prosessen sitt minne er dynamisk.  
-    Sant, fordi
+    Sant, fordi når applikasjonen trenger mer minne f.eks. til å lese en fil, så vil det allokeres fra heapen.
+
+13. Nevn noen forskjeller mellom HEAP og STACK i en prosess sitt minne.  
+    HEAP blir brukt av programmet til å lagre globale variabler. STACK er brukt til å lagre midlertidige variabler fra en funksjon. HEAP er en heirarkisk data struktur mens STACK er en linær data struktur.
+
+14. Hvorfor trenger hardware drivere og hva har det med OS å gjøre? Nevn også noen eksempel på drivere.  
+    Drivere er programvaren som kan oversette communikasjonen mellom OS og kontrolleren. Eksempler på drivere er:
+    - GPU driver
+    - Tastatur driver
+    - Driver til printer
+
+---
+
+### Skallet
+
+1.  "Signaler", "Flag" og "Redirects" bruker man i skjellet, forklar kort hva disse er.  
+    "Signaler" er hurtigtaster man kan gi til OS når man er i CLI f.eks: 
+    
+    - Ctrl-C (Abort prosess)
+    - Ctrl-D (Slutt på fil)
+    - Ctrl-Z (Sett prosess til å sove)
+    
+    "Flag" er å modifisere hvordan en kommando oppfører seg, gitt etter en flaggmarkør(/, -, --) f.eks:
+    
+    - dir/?
+    - ls -la
+    - ps aux
+    
+    Redirects er omdirigere hvor informasjonen skal legges f.eks: 
+    
+    - ">" Skriv output i en fil
+    - ">>" Skriv output inn på slutten av en fil
+    - "<" Ta innhold i en fil og bruk det som argument til kommandoen
+    - "|" Tar output fra kommando og lever den som input til neste kommando
+
+2.  OSX/LINUX - Utfør disse oppgavene i Terminal.
+    1. Naviger til Dokumenter-mappen på maskinen din
+        -  ``
+    2. List alle filene som finnes i dokument-mappen
+    3. Lag et directory(mappe)
+    4. Gå inn i mappen
+    5. Skriv inn dette for å lage en ny fil: echo TK1104 er det beste faget > kommandofil.txt
+    6. Skriv ut innholdet i filen
+    7. Kopier kommandofil.txt
+    8. List innholdet i mappen på nytt, nå er det to filer i mappen
+    9. Bytt navn på én av filene
+    10. Flytt en av filene til Dokumenter-mappen
+    11. Til slutt prøv deg frem med man kommando i terminalen
