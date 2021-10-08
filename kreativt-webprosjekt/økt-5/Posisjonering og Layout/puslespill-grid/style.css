@@ -1,12 +1,4 @@
-.gameboard {
+.gameBoard {
   display: grid;
-  
-}
-
-#piece2 {
-  grid-column: 2 / 3;
-}
-
-#piece3 {
-  grid-column: 3 / 3;
+  grid-template-columns: auto auto auto;
 }
