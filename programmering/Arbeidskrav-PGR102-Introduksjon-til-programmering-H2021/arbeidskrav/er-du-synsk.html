@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +8,181 @@
     <link rel="stylesheet" href="denne-mappen-trengs-ikke-roeres/er-du-synsk.css">
     <title>Er du synsk?</title>
 </head>
+
 <body>
-    
+
+    <button id="restart-button">Restart</button>
+
     <header>
         <h1>Er du synsk?</h1>
     </header>
 
-    <!-- Det er lov å endre HTML og id'er -->
-    <section>
-        <div id="box1-div">Denne?</div>
-        <div id="box2-div">Eller denne?</div>
-    </section>
+    <div id="all-content">
+        <section>
+            <div id="box1-div" style="user-select: none;">Denne?</div>
+            <div id="box2-div" style="user-select: none;">Eller denne?</div>
+        </section>
 
-    <div id="number-of-lives-div"></div>
+        <div id="number-of-lives-div"></div>
 
-    <div id="number-of-right-answers-div">
-        <p>Antall riktige: 0</p>
-    </div>
+        <div id="number-of-right-answers-div">
+            <p>Antall riktige: 0</p>
+        </div>
 
-    <div id="number-of-wrong-answers-div">
-        <p>Antall feil: 0</p>
-    </div>    
+        <div id="number-of-wrong-answers-div">
+            <p>Antall feil: 0</p>
+        </div>
 
-    <div id="output-div">
-        <p>Klikk på en av boksene for å begynne spillet</p>            
+        <div id="output-div">
+            <p>Klikk på en av boksene for å begynne spillet</p>
+        </div>
     </div>
 
     <script>
-        
-        //HTML-objekter
 
-        // Variabler
-        
-        // Funksjoner
+        // Get HTML-elements
+        var box1Div = document.getElementById("box1-div");
+        var box2Div = document.getElementById("box2-div");
+        var numberOfLives = document.getElementById("number-of-lives-div");
+        var numberOfRightAnswers = document.getElementById("number-of-right-answers-div");
+        var numberOfWrongAnswers = document.getElementById("number-of-wrong-answers-div");
+        var outputDiv = document.getElementById("output-div");
+        var allContent = document.getElementById("all-content");
+        var restartButton = document.getElementById("restart-button");
 
-        // Events
+        // Variables
+        var lives = prompt("Hvor mange liv vil du starte med?");
+        livesImg();
+        var correct = 0;
+        var wrong = 0;
+        var points = 0;
 
+        // Checkpoints passed
+        var pass3 = false;
+        var pass5 = false;
+        var pass7 = false;
+
+        // Checks for first button
+        function box1Check() {
+            var number = Math.floor(Math.random() * 2 + 1);
+            if (number === 1) {
+                // If correct, update game
+                correctEvent();
+            } else if (number !== 1) {
+                // If wrong, update game
+                wrongEvent();
+            }
+        };
+
+        // Checks for second button
+        function box2Check() {
+            var number = Math.floor(Math.random() * 2 + 1);
+            if (number === 2) {
+                // If correct, update game
+                correctEvent();
+            } else if (number !== 2) {
+                // If wrong, update game
+                wrongEvent();
+            }
+        }
+
+        // Correct pick
+        function correctEvent() {
+            // Update variables
+            correct = correct + 1;
+            points = points + 1;
+
+            // Check progress
+            checkGame();
+            checkPoints();
+            livesImg();
+
+            // Outputs number correct
+            numberOfRightAnswers.innerHTML = `Antall riktige: ${correct}`;
+        }
+
+        // Wrong pick
+        function wrongEvent(params) {
+            // Update variables
+            wrong = wrong + 1;
+            lives = lives - 1;
+
+            // Check progress
+            checkGame();
+            checkPoints();
+            livesImg();
+
+            // Outputs number of errors
+            numberOfWrongAnswers.innerHTML = `Antall feil: ${wrong}`;
+        }
+
+        // Checks if win or lose
+        function checkGame() {
+            // Win
+            if (points === 10) {
+                allContent.innerHTML = null;
+
+                allContent.innerHTML = `
+                <h3>Gratulerer! Du vant spillet! :)</h3>
+                <img src="images/fireworks.jpg">
+                `;
+            }
+
+            // Lose
+            if (lives === 0) {
+                allContent.innerHTML = null;
+                allContent.innerHTML = `<h3>Du tapte :(</h3>`;
+            }
+        }
+
+        // Checkpoints
+        function checkPoints() {
+            // Checkpoint 3
+            if (points === 3 && pass3 === false) {
+                pass3 = true;
+                lives = lives + 1;
+            }
+
+            // Checkpoint 5
+            if (points === 5 && pass5 === false) {
+                pass5 = true;
+                lives = lives + 1;
+            }
+
+            // Checkpoint 7
+            if (points === 7 && pass7 === false) {
+                pass7 = true;
+                lives = lives + 1;
+            }
+        }
+
+        // Show amount of lives
+        function livesImg() {
+
+            numberOfLives.innerHTML = null;
+
+            for (let i = 0; i < lives; i++) {
+                numberOfLives.innerHTML += `
+                    <img src="images/person1.jpg">
+                `;
+            }
+        }
+
+        // Restart game
+        function restartGame() {
+            // Refreshes page
+            location.reload();
+        }
+
+        // Buttonpress events
+        box1Div.onclick = box1Check;
+        box2Div.onclick = box2Check;
+
+        // Restart button event
+        restartButton.onclick = restartGame;
     </script>
 
 
 </body>
+
 </html>
