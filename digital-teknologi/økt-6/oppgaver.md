@@ -132,14 +132,23 @@
 
 2.  OSX/LINUX - Utfør disse oppgavene i Terminal.
     1. Naviger til Dokumenter-mappen på maskinen din
-        -  ``
+        - `cd Documents`
     2. List alle filene som finnes i dokument-mappen
+        - `ls`
     3. Lag et directory(mappe)
+        - `mkdir test`
     4. Gå inn i mappen
+        - `cd test`
     5. Skriv inn dette for å lage en ny fil: echo TK1104 er det beste faget > kommandofil.txt
     6. Skriv ut innholdet i filen
+        - `cat kommandofil.txt`
     7. Kopier kommandofil.txt
+        - `cp kommandofil.txt kommandofil_kopi.txt`
     8. List innholdet i mappen på nytt, nå er det to filer i mappen
+        - `ls`
     9. Bytt navn på én av filene
+        - `mv kommandofil_kopi.txt kopifil.txt`
     10. Flytt en av filene til Dokumenter-mappen
+        - `mv kopifil.txt ..`
     11. Til slutt prøv deg frem med man kommando i terminalen
+        - `man mv`
