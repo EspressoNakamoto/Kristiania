@@ -112,3 +112,29 @@ Lag følgende rapport (spørring) baser på databasetabellene og de opprettede v
 ---
 
 ### Vanskelig
+
+1.  Bruk en CASE utvalgsspørring til å hente ut: Landets navn og styresett, der styresett klassifiseres som: «Monarki», «Republikk» eller «Annet». Sorter resultatet på landets navn.
+
+    ```sql
+    SELECT Name,
+    CASE
+	    WHEN GovernmentForm LIKE '%Monarchy%' THEN 'Monarchy'
+        WHEN GovernmentForm LIKE '%Republic%' THEN 'Republic'
+        ELSE 'Other'
+    END AS GovernmentForm
+    FROM Country
+    ORDER BY Name;
+    ```
+
+2.  Husker du JOIN-oppgaven med alle land i verden og deres byer? Benytt COALESCE til å presisere at landet ikke har noen byer. Altså: Alle land i verden og deres byer (hvis de har byer). Hvis landet ikke har noen by skal det i resultatet fremkomme «Har ingen byer!».
+
+    ```sql
+    SELECT Country.Name AS Country, coalesce(City.Name, 'Har ingen byer!') AS City
+    FROM Country LEFT JOIN City ON Country.Code = City.CountryCode;
+    ```
+
+3.  Vi ønsker å se alle land i verden som ikke har noen byer. Sorter de alfabetisk på navn. (Tips: benytte en subquery?)
+
+    ```sql
+    
+    ```
