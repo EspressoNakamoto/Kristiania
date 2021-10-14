@@ -129,12 +129,24 @@ Lag følgende rapport (spørring) baser på databasetabellene og de opprettede v
 2.  Husker du JOIN-oppgaven med alle land i verden og deres byer? Benytt COALESCE til å presisere at landet ikke har noen byer. Altså: Alle land i verden og deres byer (hvis de har byer). Hvis landet ikke har noen by skal det i resultatet fremkomme «Har ingen byer!».
 
     ```sql
-    SELECT Country.Name AS Country, coalesce(City.Name, 'Har ingen byer!') AS City
+    SELECT Country.Name AS Country, COALESCE(City.Name, 'Har ingen byer!') AS City
     FROM Country LEFT JOIN City ON Country.Code = City.CountryCode;
     ```
 
 3.  Vi ønsker å se alle land i verden som ikke har noen byer. Sorter de alfabetisk på navn. (Tips: benytte en subquery?)
 
     ```sql
-    
+    SELECT Name
+    FROM Country
+    WHERE Code NOT IN (SELECT CountryCode FROM City)
+    ORDER BY Name;
+    ```
+
+4.  Vi ønsker å se prosentandelen som innbyggerne i et land utgjør av jordas totale befolkning. Konkret vil vi ha landets navn, prosentandelen (med kolonnealias "WorldPopPercentage") og kvadratkilometer for dette landet. Sorter svaret på synkende prosentandel. Problem: For å finne prosentandelen må vi også regne ut hva totalbefolkningen er som en del av spørringen (en subquery). Tips: subqueries kan plasseres andre steder enn i where clausen. Hvor trenger vi en subquery i dette tilfellet? ;-)
+
+    ```sql
+    SELECT Name, (100 * (Population / (SELECT SUM(Population)
+	FROM Country))) AS WorldPopPercentage, SurfaceArea
+    FROM Country
+    ORDER BY WorldPopPercentage DESC;
     ```
