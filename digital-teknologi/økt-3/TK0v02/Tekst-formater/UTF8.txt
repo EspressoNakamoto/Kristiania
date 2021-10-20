@@ -1,0 +1,8 @@
+﻿Dette er de små norske bokstavene: æøå
+Dette er de store norske bokstavene: ÆØÅ
+Dette er ikke bokstaver: 0123456789
+
+
+===
+OK?
+/Listog

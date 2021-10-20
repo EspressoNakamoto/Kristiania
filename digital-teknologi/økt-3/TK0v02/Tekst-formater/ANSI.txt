@@ -1,0 +1,8 @@
+Dette er de smו norske bokstavene: זרו
+Dette er de store norske bokstavene: ֶ״ֵ
+Dette er ikke bokstaver: 0123456789
+
+
+===
+OK?
+/Listog
