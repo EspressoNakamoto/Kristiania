@@ -15,3 +15,4 @@ UNIX:
 - **På Windows: Finner du igjen de samme filen i kommando linje outputet som du så på det grafiske skrivebordet?** 
 - **Bruk '>' tegnet for å sende output fra listingen inn i en txt fil.**
 - **Åpne opp txt filen i notepad. Hvordan gjør du det fra kommando linje verktøyet?**
+
