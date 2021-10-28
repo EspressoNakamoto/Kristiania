@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gjett det hemmelige ordet</title>
+</head>
+<body>
+    <img src="/smile.jfif" alt="smile">
+    <script>
+        hemmligOrd()
+        function hemmligOrd() {
+            
+            var word = prompt("Hva er det hemmelige ordet? Tips: if");
+            if (word == "else") {
+                alert("Riktig!");
+            } else {
+                alert("Feil!");
+                hemmligOrd();
+            }
+        }
+    </script>
+</body>
+</html>

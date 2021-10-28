@@ -1,0 +1,13 @@
+Gjennomfør følgende steg
+1.	Kodeforståelse: Les gjennom koden og forklar (gjerne i gruppe til hverandre):
+    a.	hva den har som hensikt
+        - Siden har som hensikt å kalkulere hvor mange pizzar, colaer og sjokolader man trenger i folhold til hvor mange gjester.
+    b.	hva slags informasjon som skal skrives ut til siden
+        - Den skal skrive ut hvor mange gjester som kommer og hvor mange pizzaer, colaer, og sjokolader man trenger.
+
+2.	Feilfinning: Les gjennom koden og se om du greier å identifisere feil i den
+    -   Kan ikke ha bindestrek i variabel(linje 21-24). Feil id på `getElementByid` og ikke bruk av ". Ble brukt ":" istedenfor "="(linje 34). Brukt "&" istedenfor "$" på linje 38 - 40 og på linje 35.
+
+3.	Debugging: Kopier koden inn i HTML-editor og bruk Web Console i nettleser som hjelp for å debugge koden til du får den til å kjøre.
+4.	Kodeforståelse: Der hvor det er tre spørsmålstegn ??? fyller du inn tekst du mener er fornuftig å ha med i programmet
+5.	Kommentering: Bruk kommentering for å markere områder med kode: eksempelvis er de to første linjene i script om innhenting av HTML-elementer
