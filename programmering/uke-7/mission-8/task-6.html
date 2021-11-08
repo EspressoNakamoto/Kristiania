@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task 6</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 6</title>
-</head>
+    <body>
+        <ul id="list-output"></ul>
 
-<body>
+        <script>
+            // Variables
+            var listOutput = document.getElementById("list-output");
 
-</body>
+            var wantToContinue = true;
 
+            // Array
+            var words = [];
+
+            // Loop
+            while (wantToContinue == true) {
+                var addWord = prompt("Legg ord i arrayet");
+
+                words.push(addWord);
+
+                var userWantToContinue;
+
+                continueEvent();
+                function continueEvent() {
+                    userWantToContinue = prompt(
+                        "Legg til et ord til? (ja / nei)"
+                    ).toLowerCase();
+                    if (userWantToContinue == "ja") {
+                        wantToContinue = true;
+                    } else if (userWantToContinue == "nei") {
+                        wantToContinue = false;
+                        for (let output = 0; output < words.length; output++) {
+                            listOutput.innerHTML += `<li>${words[output]}</li>`;
+                        }
+                    } else {
+                        alert("Ja eller nei");
+                        continueEvent();
+                    }
+                }
+            }
+        </script>
+    </body>
 </html>
