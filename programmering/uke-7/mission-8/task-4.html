@@ -9,8 +9,19 @@
 </head>
 
 <body>
-    <script>
+    <p id="number-output"></p>
 
+    <script>
+        // Get HTML elements
+        var numberOutput = document.getElementById("number-output");
+        var number = [];
+
+        // Loops
+        for (var i = 0; i < 1000; i++) {
+            var numberGen = Math.floor(Math.random() * 1000);
+            number.push(numberGen);
+            numberOutput.innerHTML += `${number[i]} `;
+        }
     </script>
 </body>
 

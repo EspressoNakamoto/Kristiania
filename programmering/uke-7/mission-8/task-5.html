@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <p id="loop-output"></p>
+
+    <script>
+        // Get HTML elements
+        var loopOutput = document.getElementById("loop-output");
+
+        // Variables
+        var loopNumber = 0;
+        var userInput = "ja";
+
+        // Loops
+        while (userInput == "ja") {
+            userInput = prompt("Vil du fortsette?");
+            loopNumber = loopNumber + 1;
+            alert(loopNumber);
+            loopOutput.innerHTML = `Antall ganger while-løkken har kjørt: ${loopNumber}`;
+        }
+    </script>
+</body>
+
+</html>
