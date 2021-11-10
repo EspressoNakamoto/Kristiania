@@ -45,5 +45,44 @@ UNIX:
 
 ## OSX/Linux 1-5: Lær om nye verktøy
 
--   **Les om sysinternals sine verktøy, finner dere noen tilsvarende verktøy som kan brukes på andre plattformer? Finner dere de samme featurene i selve OSet?**  
-    I MacOS og linux er det allerede mye av verktøyene innebygd i operativsystemet.
+**Les om sysinternals sine verktøy, finner dere noen tilsvarende verktøy som kan brukes på andre plattformer? Finner dere de samme featurene i selve OSet?**  
+ I MacOS og linux er det allerede mye av verktøyene innebygd i operativsystemet.
+
+## Oppgave 2-1: Arkiv filer
+
+**Operativsystemet har allerede støtte for komprimerte arkivfiler – men et eget verktøy er bedre og mer fleksibelt – og støtter krypterte arkiver.  
+Last ned et egnet verktøy for arkiv filer, jeg bruker WinRAR på Windows, men 7-Zip er også anbefalt.  
+https://www.7-zip.org/download.html  
+https://www.rarlab.com/download.htm  
+WinRAR kan lastes ned for Windows, macOS, Linux og FreeBSD.  
+På andre OS kan dere bruke 7-zip eller andre verktøy som kan opprette og pakke ut ZIP filer, på Linux pass på at du som et minimum har «ZIP» installert.**
+
+Siden jeg bruker linux har jeg zip. Så jeg kan zippe en fil ved å skrive:
+
+```
+zip testfil.zip testfil
+```
+
+`zip` er kommandoen, `testfil.zip` er filen som vi kommer til å lage og `testfil` er filen vi zipper fra.
+
+## Oppgave 2-2: Lag en kryptert ZIP fil
+
+-   **Bruk kommandolinje for å lage en fil (hint; bruk type [på Windows] eller cat [på Linux/OSX] kommandoen sammen med pipe operator).**  
+    Bruker `touch test` for å lage en tom fil som heter test.
+
+-   **Opprett en kryptert ZIP fil med denne filen inni.**  
+    Oppretter kryptert fil med `zip test.zip test`.
+
+-   **Send ZIP filen på epost til en annen i klassen.**
+
+-   **Åpne opp ZIP filen (som du mottar fra «en annen i klassen»).**  
+    Ved å åpne opp en zip fil så kan vi unzippe filen først ved å skrive `unzip test.zip`. Så kan vi åpne filen i en editor f.eks `gedit test`.
+
+## Oppgave 3-1: Lag et batch script
+
+**Opprett en fil som heter simplejobs.bat, og legg inn noen kommandoer du kunne lagt i kommando linje verktøyet i filen (med linjeskift mellom hver kommando), feks å liste ut noen filer. Lagre filen og prøv å kjøre den. (Eller tilsvarende skript på Linux.)**
+
+```
+ls
+ping 1.1.1.1
+```
