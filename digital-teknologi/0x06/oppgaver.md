@@ -36,3 +36,9 @@ RFC står for "Request for Comment" og er dokumenter som inneholder tekniske spe
 ---
 
 ## 2. Protokoller og andre begreper
+
+**a) Sant/Usant: Protokoller definerer hvordan kommunikasjon over internett skal fungere.**
+
+Sant f.eks. TCP.
+
+**b) Hva er forskjellen mellom en Klient-tjener-modell og en Peer-peer modell, tegn og vis.**
