@@ -68,3 +68,7 @@ Fordi når internett ble først oppfunnet var det designet for et minimum av på
 ## h) Hva kan gå galt når data overføres over internett?
 
 Det kan bli tap av data, for lite båndbredde og for mye tidsforsinkelse.
+
+# HTTP
+
+## a) Sant/Usant: HTTP oppbevarer informasjon om tidligere forespørsler.
