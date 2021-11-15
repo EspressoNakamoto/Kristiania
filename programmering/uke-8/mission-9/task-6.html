@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task 6</title>
+    </head>
+    <body>
+        <div id="color-div"></div>
+        <p id="color-output"></p>
+
+        <script>
+            var colorDiv = document.getElementById("color-div");
+            var colorOutput = document.getElementById("color-output");
+
+            function defaultStyle() {
+                colorDiv.style.width = "300px";
+                colorDiv.style.height = "300px";
+                colorDiv.style.backgroundColor = "rgb(255, 0, 0)";
+            }
+
+            function getRandomNumber() {
+                return Math.floor(Math.random() * 256);
+            }
+
+            function changeColor() {
+                let r = getRandomNumber();
+                let g = getRandomNumber();
+                let b = getRandomNumber();
+
+                let rgb = `rgb(${r}, ${g}, ${b})`;
+
+                colorDiv.style.backgroundColor = rgb;
+                colorOutput.innerHTML = rgb;
+            }
+
+            colorDiv.onclick = changeColor;
+            defaultStyle();
+        </script>
+    </body>
+</html>

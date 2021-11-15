@@ -17,9 +17,20 @@
         </ul>
 
         <script>
-            var array = ["Pølse", "Kaviar", "Reker", "Tomater", "Mozarella"];
+            const foodArray = [
+                "Pølse",
+                "Kaviar",
+                "Reker",
+                "Tomater",
+                "Mozarella",
+                "Poteter",
+            ];
 
-            document.getElementsByTagName("li");
+            const lists = document.getElementsByTagName("li");
+
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].innerHTML += foodArray[i];
+            }
         </script>
     </body>
 </html>
