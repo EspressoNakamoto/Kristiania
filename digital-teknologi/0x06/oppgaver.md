@@ -41,4 +41,10 @@ RFC står for "Request for Comment" og er dokumenter som inneholder tekniske spe
 
 Sant f.eks. TCP.
 
-**b) Hva er forskjellen mellom en Klient-tjener-modell og en Peer-peer modell, tegn og vis.**
+**b) Hva er forskjellen mellom en Klient-tjener-modell og en Peer-to-peer modell, tegn og vis.**
+
+En klient-tjener-modell er en modell hvor det hovedsakelig er for filoverføring. Du har en klient som er et system som sender et forespørsel til en server som inneholder tjenesten/filene. Fordelen med en klient-tjener-modell er at det er bedre sikkerhet fordi det er serveren som bestemmer hvem som får tilgang til filene. Klient-tjener-modellen er også mer robust siden det kan bli utvidet uten degradering på ytelsen. Ulempen med en klient-tjener-modell er en sentral server må bli bygd og være på hele tiden, hvis ikke vil nettverket kollapse.
+
+En peer-to-peer modell er hovedsakelig for kommunikasjon. I et peer-to-peer modell er alle "peers" likeverdige og sammenliknet med klient-tjener-modellen er peers i peer-to-peer modellen både server og klient. Fordelen med peer-to-peer modell er at det trengs ikke å bli bygd en sentral server ettersom alle peers er koblet direkte til hverandre og oppfører seg som både server og klient. Ulempen med peer-to-peer modell er at det er mindre sikker siden peers er både server og klient. Det medfører at filene ikke kan bli håndert sentralt og medfører at det er opp til klienten hvor sikker tilkoblingen er og hvilke filer de får tilgang til. En annen ulempe er også at desto fler peers det er på nettverket, vil hastigheten minke fordi hver bruker er koblet til andre brukere.
+
+**c) Hvilken port kobler en TCP-forbindelse seg mot for en hjemmeside.**
