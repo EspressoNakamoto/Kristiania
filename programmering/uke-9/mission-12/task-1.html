@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task 1</title>
+    </head>
+    <body>
+        <h1>Hvilket dyr vil du se bilde av?</h1>
+        <p>Skriv inn dyret du vil se bilder av (katt, hund, fugl)</p>
+        <input id="user-input" type="text" />
+        <button id="button-press">Vis dyrebilder</button>
+        <div id="main-div"></div>
+
+        <script>
+            const userInput = document.getElementById("user-input");
+            const buttonPress = document.getElementById("button-press");
+            const mainDiv = document.getElementById("main-div");
+
+            const pets = {
+                cat: "images/cat.png",
+                dog: "images/dog.png",
+                bird: "images/bird.png",
+            };
+
+            function imageOutput() {
+                switch (userInput.value.toLowerCase()) {
+                    case "katt":
+                        mainDiv.innerHTML = `<img src="${pets.cat}" width="500px">`;
+                        break;
+                    case "hund":
+                        mainDiv.innerHTML = `<img src="${pets.dog}" width="500px">`;
+                        break;
+                    case "fugl":
+                        mainDiv.innerHTML = `<img src="${pets.bird}" width="500px">`;
+                        break;
+                    default:
+                        mainDiv.innerHTML = null;
+                        break;
+                }
+            }
+
+            buttonPress.onclick = imageOutput;
+
+            userInput.addEventListener("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    buttonPress.click();
+                }
+            });
+        </script>
+    </body>
+</html>

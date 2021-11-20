@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task 5</title>
+    </head>
+    <body>
+        <label for="height">Height(cm):</label>
+        <input type="text" id="user-height" /><br /><br />
+        <label for="weight">Weight(kg):</label>
+        <input type="text" id="user-weight" /><br /><br />
+        <input type="submit" value="submit" id="user-submit" />
+
+        <div id="output-div"></div>
+
+        <script>
+            const userSubmit = document.getElementById("user-submit");
+            const outputDiv = document.getElementById("output-div");
+
+            function calcBMI() {
+                let heightInput = document.getElementById("user-height").value;
+                let weightInput = document.getElementById("user-weight").value;
+
+                let bmi =
+                    weightInput / ((heightInput / 100) * (heightInput / 100));
+
+                bmi = bmi.toFixed(1);
+
+                let bmiClass;
+                let bmiRisk;
+
+                if (bmi < 18.5) {
+                    bmiClass = "Undervekt";
+                    bmiRisk = "Lav for diabetes, økt for andre helseproblemer";
+                } else if (bmi < 25) {
+                    bmiClass = "Normalvekt";
+                    bmiRisk = "Lav";
+                } else if (bmi < 30) {
+                    bmiClass = "Overvekt";
+                    bmiRisk = "Økt for diabetes";
+                } else if (bmi < 35) {
+                    bmiClass = "Fedme, grad 1";
+                    bmiRisk = "Økt for diabetes og økt dødelighet";
+                } else if (bmi < 40) {
+                    bmiClass = "Fedme, grad 2";
+                    bmiRisk =
+                        "Høy risiko for flere helseproblemer og økt dødelighet";
+                } else if (bmi >= 40) {
+                    bmiClass = "Fedme, grad 3";
+                    bmiRisk = "Ytterligere økt helserisiko";
+                }
+
+                outputDiv.innerHTML = `
+                    <p>Din BMI er: ${bmi}</p>
+                    <p>Klassifisering: ${bmiClass}</p>
+                    <p>Sykdomsrisiko: ${bmiRisk}</p>
+                `;
+            }
+
+            userSubmit.onclick = calcBMI;
+        </script>
+    </body>
+</html>
