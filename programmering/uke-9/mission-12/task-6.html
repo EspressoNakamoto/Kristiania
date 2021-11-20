@@ -6,5 +6,80 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Task 6</title>
     </head>
-    <body></body>
+    <body>
+        <div>
+            <h1><strong>TOPGAMES</strong></h1>
+            <label for="category">Søk etter kategori</label>
+            <input
+                type="text"
+                placeholder="racing, shooter, rpg"
+                id="category"
+            />
+            <button id="search-category">Søk etter kategori</button>
+        </div>
+
+        <div>
+            <h2><strong>Søk etter pris</strong></h2>
+            <label for="min-price">Minimum pris</label>
+            <input type="text" id="min-price" />
+            <label for="max-price">Maximum pris</label>
+            <input type="text" id="max-price" />
+            <button id="search-price">Søk etter pris</button>
+        </div>
+
+        <div id="output-div"></div>
+
+        <script>
+            const category = document.getElementById("category");
+            const searchCategory = document.getElementById("search-category");
+            const minPrice = document.getElementById("min-price");
+            const maxPrice = document.getElementById("max-price");
+            const searchPrice = document.getElementById("search-price");
+            const outputDiv = document.getElementById("output-div");
+
+            const games = [
+                {
+                    title: "Forza Horizon 5",
+                    description:
+                        "Forza Horizon 5 is a 2021 racing video game developed by Playground Games and published by Xbox Game Studios. It is the fifth Forza Horizon title and twelfth main instalment in the Forza series. The game is set in a fictionalised representation of Mexico. It was released on 9 November 2021[a] for Microsoft Windows, Xbox One, and Xbox Series X/S.",
+                    image: "images/forza-horizon-5.jpeg",
+                    price: 400,
+                    category: "racing",
+                },
+                {
+                    title: "Battlefield 2042",
+                    description:
+                        "Battlefield 2042 is a first-person shooter video game developed by DICE and published by Electronic Arts. The game was released on November 19, 2021,[a] for Microsoft Windows, PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X and Series S. Unlike recent Battlefield games, Battlefield 2042 is solely multiplayer and does not have a single-player campaign. It also features support for cross-platform play, a first in the series. Upon release, Battlefield 2042 received mixed reviews from critics.",
+                    image: "images/battlfield-2042.jpeg",
+                    price: 800,
+                    category: "shooter",
+                },
+                {
+                    title: "New World",
+                    description:
+                        "New World is a massively multiplayer online role-playing game (MMORPG) developed by Amazon Games Orange County and published by Amazon Games released on September 28, 2021.[1][3][2] The game was previously scheduled to release in May 2020 and subsequently August 2021, but was delayed to its current date.[4][5] Set in the mid-seventeenth century, players colonize a fictional land modeled after the Americas.[6]",
+                    image: "images/new-world.jpeg",
+                    price: 300,
+                    category: "rpg",
+                },
+            ];
+
+            searchCategory.onclick = categoryOutput;
+
+            function categoryOutput() {
+                let search = category.value;
+
+                alert(games.category);
+                if (category.toLowerCase() === games.category) {
+                    outputDiv.innerHTML = `
+                        <h1>${games.title}</h1>
+                        <img src="${games.image}" width="500px">
+                        <p>Pris: ${games.price}</p>
+                        <p>Kategori: ${games.category}</p>
+                        <p>${games.description}</p>
+                    `;
+                }
+            }
+        </script>
+    </body>
 </html>
