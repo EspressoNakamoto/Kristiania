@@ -43,14 +43,14 @@
                     description:
                         "Forza Horizon 5 is a 2021 racing video game developed by Playground Games and published by Xbox Game Studios. It is the fifth Forza Horizon title and twelfth main instalment in the Forza series. The game is set in a fictionalised representation of Mexico. It was released on 9 November 2021[a] for Microsoft Windows, Xbox One, and Xbox Series X/S.",
                     image: "images/forza-horizon-5.jpeg",
-                    price: 400,
+                    price: 500,
                     category: "racing",
                 },
                 {
                     title: "Battlefield 2042",
                     description:
                         "Battlefield 2042 is a first-person shooter video game developed by DICE and published by Electronic Arts. The game was released on November 19, 2021,[a] for Microsoft Windows, PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X and Series S. Unlike recent Battlefield games, Battlefield 2042 is solely multiplayer and does not have a single-player campaign. It also features support for cross-platform play, a first in the series. Upon release, Battlefield 2042 received mixed reviews from critics.",
-                    image: "images/battlfield-2042.jpeg",
+                    image: "images/battlefield-2042.jpeg",
                     price: 800,
                     category: "shooter",
                 },
@@ -65,19 +65,43 @@
             ];
 
             searchCategory.onclick = categoryOutput;
+            searchPrice.onclick = priceOutput;
 
             function categoryOutput() {
                 let search = category.value;
+                outputDiv.innerHTML = null;
 
-                alert(games.category);
-                if (category.toLowerCase() === games.category) {
-                    outputDiv.innerHTML = `
-                        <h1>${games.title}</h1>
-                        <img src="${games.image}" width="500px">
-                        <p>Pris: ${games.price}</p>
-                        <p>Kategori: ${games.category}</p>
-                        <p>${games.description}</p>
-                    `;
+                for (let i = 0; i < games.length; i++) {
+                    if (search === games[i].category) {
+                        outputDiv.innerHTML += `
+                            <article>
+                                <h3>${games[i].title}</h3>
+                                <img src="${games[i].image}" width="500px">
+                                <p style="width: 500px">${games[i].description}</p>
+                            </article>
+                        `;
+                    }
+                }
+            }
+
+            function priceOutput() {
+                let minSearch = minPrice.value;
+                let maxSearch = maxPrice.value;
+                outputDiv.innerHTML = null;
+
+                for (let i = 0; i < games.length; i++) {
+                    if (
+                        minSearch <= games[i].price &&
+                        maxSearch >= games[i].price
+                    ) {
+                        outputDiv.innerHTML += `
+                            <article>
+                                <h3>${games[i].title}</h3>
+                                <img src="${games[i].image}" width="500px">
+                                <p style="width: 500px">${games[i].description}</p>
+                            </article>
+                        `;
+                    }
                 }
             }
         </script>

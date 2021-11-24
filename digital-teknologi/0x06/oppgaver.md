@@ -72,3 +72,80 @@ Det kan bli tap av data, for lite båndbredde og for mye tidsforsinkelse.
 # HTTP
 
 ## a) Sant/Usant: HTTP oppbevarer informasjon om tidligere forespørsler.
+
+Usant. HTTP er det man kaller for "stateless". Det er cookies som oppbevarer informasjon.
+
+## b) Sant/Usant: En URL er en type URI
+
+Sant. En URL står for Uniform Resource Locator som forteller hvor ressursen er. En URI står for Uniform Resource Identifier som identifiserer ressursen.
+
+## c) https://www.kristiania.no/sok?phrase=Digital%20Teknologi Identifiser de ulike delene av HTTP url-en, host, port, path, query, fragment. Alle er ikke nødvendigvis tilstede. Vet du også hva %20 betyr her?
+
+Host : https://www.kristiania.no
+
+Path : /sok
+
+Query: phrase=Digital%20Teknologi
+
+%20 står for mellomrom. Fordi det er mange tegn som ikke er lov å ha med i en URL, så må man heller skrive de tegnene hvor du starter med % tegnet og så hex nummeret til tegnet fra ASCII tabellen.
+
+## d) I HTTP 1.0 GET-request, hvordan spesifiseres språk?
+
+Språk spesifiseres i headeren.
+
+## e) Hvilken type metoder har HTTP 1.1 som ikke HTTP 1.0 har?
+
+-   PUT
+
+    -   Laster opp en fil til adressen som er spesifisert i URL-feltet
+
+-   DELETE
+
+    -   Sletter filen som er spesifisert i URL-feltet
+
+-   OPTION
+
+-   TRACE
+
+## f) Gi tre eksempler på statuskoder og hva de betyr.
+
+**404 Not Found** er en statuskode som sier at det etterspurte ressursen ikke er funnet.
+
+**200 OK** er en statuskode som sier at spørringen er vellykket.
+
+**400 Bad Request** er en statuskode som sier at spørringen er ikke forstått av tjeneren.
+
+# 4. DNS
+
+## a) Hva bruken DNS til?
+
+DNS står for Domain Name System og blir brukt til å identifisere og finne lokasjonen(ip adressen) på det etterspurte domenet.
+
+## b) Hvordan er navne-tjenere fordelt?
+
+Navne-tjenere er fordelt hierarkisk.
+
+## c) Bruk `nslookup` mot www.vg.go i terminalen, hvilken informasjon vises?
+
+Det vises servernavnet og adressen til DNS'en du spør.
+
+```
+Server:         1.1.1.1
+Address:        1.1.1.1#53
+```
+
+Etterfølget av navn(ene) og ip(ene) til www.vg.no
+
+```
+Non-authoritative answer:
+Name:   www.vg.no
+Address: 195.88.55.16
+Name:   www.vg.no
+Address: 195.88.54.16
+Name:   www.vg.no
+Address: 2001:67c:21e0::16
+```
+
+## d) Prøv deg frem og endre Resource Records når du skal kjøre `nslookup`, hvordan ser de ulike svarene ut? Er det annerledes fra når du kjørte det første gang?
+
+Du kan endre DNS serveren du vil bruke men du vil forstatt få samme identifikator og ip adressen til domenet.
