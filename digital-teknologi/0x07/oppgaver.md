@@ -12,4 +12,3 @@ Store spill bruker ofte P2P modellen. Ulempen med dette er pålitelighet og sikk
 
 Applikasjonen kommuniserer med transportlaget via Socket
 
-Test. Test.
