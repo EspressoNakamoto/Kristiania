@@ -67,3 +67,63 @@ SMTP protokollen brukes til mellom tjenere for å sende epost.
 Med SMTP protokollen bruker man enten POP3, IMAP eller HTTPS.
 
 ## c) For å sende en epost trengs en TCP-kobling å etableres, hva inneholder en TCP-kobling mellom en klient og tjenere?
+
+SYN(synkronisering), SYN-ACK(synkronisering + Accept) og ACK(Accept) for å få en TCP-kobling(handshake).
+
+## d) Hvilken port brukes for TCP-kobling for å sende epost?
+
+Bruker port 25.
+
+# HTTP
+
+## a) Sant/usant: HTTP er en filoverføringsprotokoll.
+
+Ja, HTTP står for Hypertext Transfer Protocol er en enkel filoverføringsprotokoll.
+
+## b) Tegn opp HTTP-headeres med penn og papir, og bytt ut spørsmålstegnene med riktig beskrivelse.
+
+!!!
+
+## c) Hvilke deler finnes i en http URL?
+
+Det er først "authority" hvor det inneholder domenet og port, så er det path, så query og til slutt fragment.
+
+## d) Hva er forskjellene mellom http 1.0 og http 1.1?
+
+1.1 har flere kommando enn 1.0 og har da flere muligheter.
+
+## e) Hva er en "Cookie"?
+
+En cookie er for å bevare tilstand og/eller huske autorasisjoner og instillinger.
+
+## f) Hva utvikledes for å få http mer sikkert?
+
+For å få sikrere forbindelse over http kan man bruke https(SSL/TLS).
+
+# FTP
+
+## a) Sant/usant: FTP er ikke en protokoll.
+
+Usant, FTP(File Transfer Protocol) er en filoverføringsprotokoll.
+
+## b) Hva brukes FTP til? Og hvilken port brukes med FTP?
+
+FTP bruker til filoverføring og via TCP bruker port 21 for kontoll og port 20 for dataoverføring.
+
+## c) Hva brukes disse for i FTP?
+
+### 125, 331, 425, 252
+
+Det er returkoder og de står for:
+
+-   125 Data connection already open; transfer starting
+
+-   331 Username OK, password required
+
+-   425 Can't open data connection
+
+-   452 Error writing file
+
+## d) Er det stor forskjell på FTP og SFTP?
+
+Ja, SFTP er en helt ny protokoll.
