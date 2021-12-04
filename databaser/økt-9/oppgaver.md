@@ -1,4 +1,4 @@
-## Oppgave 1, modellering – lage ER diagram ut ifra SQL script
+# Oppgave 1, modellering – lage ER diagram ut ifra SQL script
 
 Sjekk scriptet DB1102_09_schema.sql (du finner det i Canvas, og du kan også se siste oppgaveside for gjengivelse av innholdet) som bygger opp en liten database bestående av 2 tabeller.
 
@@ -8,9 +8,10 @@ Studer scriptet, og tegn logisk databasemodell som samsvarer med scriptet.
 
 ---
 
-## Oppgave 2 – SQL
+# Oppgave 2 – SQL
 
-a)  
+## a)
+
 Kjør de to scriptene DB1102_09_schema.sql og DB1102_09_data.sql i MySQL Workbench ("File"->"Open SQL Script ...", finn filene på disk'en din. Deretter kjør statements som åpnes som vanlig.) Eller benytt copy/paste fra scriptet på siste side.
 
 Databasen inneholder informasjon om flyruter og reservasjon (bestilling) av plass på flyruten. Forklaring av tabellattributtene:
@@ -24,7 +25,8 @@ Databasen inneholder informasjon om flyruter og reservasjon (bestilling) av plas
 -   Om en reservasjon lagres også navnet (navn) på personen som reserverte billetten(e), samt hvor mange billetter (antall) bestillingen gjelder.
 -   kapasitet er det totale antall seter på flyruten denne dagen. Det brukes ofte forskjellige fly på en flyrute, slik at kapasiteten kan variere avhengig av dato.
 
-b)  
+## b)
+
 Følgende data skal registreres i databasen:
 Det skal opprettes nye ruter mellom Paris (CDG, Charles de Gaulle) og Stockholm (ARL, Arlanda).
 
@@ -70,7 +72,8 @@ VALUES
 (15, 4, 20111031, 43, 130, "Toskesen");
 ```
 
-c)  
+## c)
+
 Du oppdager at Fornebu (FBU) er nedlagt for mange år siden. Du blir derfor nødt til å endre alle henvisninger til Fornebu. Nye verdier skal være Gardermoen (OSL).
 
 ```sql
@@ -87,11 +90,34 @@ WHERE tilkode = "FBU";
 
 ---
 
-## Oppgave 3 – Normalisering og modellering
+# Oppgave 3 – Normalisering og modellering
 
-**a) Forklar hvilke ulemper denne tabellstrukturen har.**  
+## a) Forklar hvilke ulemper denne tabellstrukturen har.
+
 Tabellstrukturen har flere dobbellagringer og kan bli forbedret ved å splitte opp tabellene og få det funksjonelt avhengig.
 
-b) Bestem alle determinanter i tabellene. Normaliser deretter tabellene til 3NF (tredje normalform).
+## b) Bestem alle determinanter i tabellene. Normaliser deretter tabellene til 3NF (tredje normalform).
 
-c) Tegn logisk databasemodell for den nye, normaliserte database-strukturen.
+Determinanter i RUTE-tabellen:
+
+-   rutenr --> avgtid, anktid, frakode, tilkode
+-   frakode --> fraplass, fraby
+-   tilkode --> tilplass, tilby
+
+Merk: fraplass og tilplass, fraby og tilby, henviser egentlig til samme opplysninger. Ved å endre navn får vi at både frakode og tilkode er determinant for flyplass (nytt felles navn for fraplass/tilplass) og by (nytt felles navn for fraby/tilby).
+
+Determinanter i RESERVASJON-tabellen:
+
+-   rutenr, dato --> kapasitet
+-   resnr --> navn , antall, rutenr, dato
+
+Normalisering til 3NF - vi får følgende tabeller:
+
+-   RUTE (rutenr, avgtid, anktid, frakode, tilkode)
+-   STED (kode, flyplass, by)
+-   RESERVASJON (resnr, rutenr, dato, navn, antall)
+-   FLYVNING (rutenr, dato, kapasitet)
+
+## c) Tegn logisk databasemodell for den nye, normaliserte database-strukturen.
+
+![databasemodell](ny-databasemodell.png)
