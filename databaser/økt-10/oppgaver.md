@@ -31,3 +31,5 @@
     Altså at alle determinanter er også kandidatnøkler.
 
 -   **Denormalisering**
+
+    Denormalisering er å endre tabellene i en database slik at normaliseringsgraden reduseres.
