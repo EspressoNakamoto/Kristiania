@@ -33,14 +33,17 @@
     ACID står for:
 
     -   Atomicity
+
         -   Hel transaksjon må gjennomføres, eller så tilbakestilles alt.
 
     -   Consistency
+
         -   En transaksjon må flytte databasen fra én fullverdig tilstand til en annen.
 
     -   Isolation
+
         -   Det som skjer internt i en transaksjon skal være usynlig for andre transaksjoner inntill transaksjonen er fullført.
-    
+
     -   Durability
         -   Resultatet av en fullført transaksjon skal lagres i databasen, uavhengig av hva som skjer i kommende transaksjoner.
 
@@ -61,4 +64,3 @@
     Målet med GDPR er å øke brukernes kontroll og rettigheter over sine personlige data og forenkle regelverket for internasjonale virksomheter.
 
 # Oppgave 2 - roller og rettigheter
-
