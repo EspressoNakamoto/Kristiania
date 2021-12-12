@@ -93,4 +93,80 @@ Ja for de er på samme nettverk. Når man utfører AND operasjonen så finner ma
 
 ## j) Kan 10.21.3.5 med nettmaske 255.255.255.0 sende direkte til 10.21.2.255 med nettmaske 255.255.255.0? Hint: Se slideserien fra forelesning for hvordan du skal regne ut dette.
 
-Nei, for de er ikke på samme nettverk. Når man utfører AND operasjonen så finner man ut at det nettverket på den første IP'en er 10.21.3.0
+Nei, for de er ikke på samme nettverk. Når man utfører AND operasjonen så finner man ut at det nettverket på den første IP'en er 10.21.3.0/24, og den andre IP'en er 10.21.2.0.23.
+
+## k) Hva menes med private adresser?
+
+Det er adresser som blir brukt i et lokalt nettverk.
+
+## l) Hva er et subnet?
+
+Et subnet et undernettverk som er på et nettverk. F.eks. 223.1.1.1 og 223.1.2.1 er på 2 forskjellige undernettverk. Det blir brukt for å ha større mengde med enheter på ett nettverk.
+
+# ICMP
+
+## a) Hvem er det som bruker ICMP?
+
+Host, router og gateway bruker ICMP(Internet Control Message Protocol) for feil-rapportering av datagram.
+
+## b) Hva er en host, router og en gateway?
+
+Host er en maskin koblet til nettverket. Router er en nettverks maskin som sender datapakker mellom maskiner og nettverk.
+
+## c) Hvorfor utnytter `tracert/traceroute` ICMP protokollen?
+
+For å ekkoe pakker til destinasjonen, TRACERT bruker da TTL verdien 1. Den vil da sende tilbake hvor mange hopp den tok når ICMP Time Exceeded melding blir sendt tilbake. Med det kan man finne ut hvor i ruten det kan være forsinkelser/problemer.
+
+## d) Test å "pinge" vg.no, hvilken informasjon får du av det?
+
+Ved å pinge vg.no vår jeg opp hvor mange bytes fra vg.no, ip-adressen til vg.no, ICMP sekvens-nummer, TTL verdien og tiden den brukte i ms.
+
+# NAT
+
+## a) Hva er problemet/problemene som NAT løser?
+
+NAT løser problemet at det ikke trenger at alle maskiner har en offentlig IP-adresse. NAT "oversetter" LAN til WAN adresse og omvendt.
+
+En NAT-ruter vil erstatte avsenders IP-adresse og portnummer med NAT IP-adresse og nytt portnummer. NAT vil da huske i oversettelsestabellen hver avsenders IP-adresse og portnummer med NAT IP-adresse og det nye portnummeret. Når datagram kommer inn vil NAT IP-adresse on nye portnummeret bli konvertert til avsenders IP-adresse og portnummer som er lagret i NAT tabellen.
+
+## b) Hva er spesielt med 192.168.x.x og 10.x.x.x adresser?
+
+Det er private IP-adresser som brukes i lokale nettverk.
+
+## c) Sant/Usant: Du og din venn er koblet på samme LAN og sender datagram ut til internettet, dere har da ulike IP-adresser for å kunne identifisere seg.
+
+Usant, vi bruker samme gateway men NAT vil oversette det og sende begge pakker ut fra en felles IP-adresse.
+
+## d) Forklar kort hva traversering-problemet med NAT betyr.
+
+Traversering-problemet er når en ekstern klient vet bare det offentlige ip adressen men ikke den lokale IP-adressen den vil nå.
+
+# IPv6
+
+## a) Hva er de største forskjellene mellom IPv4 og IPv6?
+
+IPv6 har 128 bit adressefelt og IPv4 har 32 bit adressefelt. IPv6 forenkler header-format ved å fjerne mulighet for fragmentering og fjerner sjekksummen. IPv6 forenkler adressering og data-fly og header har en fast lengde på 40 byte.
+
+## b) Hvordan ser IPv6 notasjonen ut?
+
+IPv6 notasjonen er på max 128 bit og blir skrevet hexadesimalt i 8 grupper på 2 byte/16 bit. Om det er kun 0 i en gruppe så kan hele adressen forkortes gjennom å skrive "::".
+
+IPv6 eksempel: 2001:0DB8:AC10:FE01::
+
+## c) Forklar kort hva "Unicast", "Anycast" og "Multicast" er.
+
+Det er forskjellige typer IPv6 adresser.
+
+Unicast: Enkeltadresse
+
+Anycast: Adresse som er bestemt av ruter
+
+Multicast: Adresse til en forhåndsdefinert gruppe
+
+## d) Hva er forskjellen på Dual stack og Tunneling, og hva brukes det til?
+
+På grunn av overgangsperioden til IPv6 er det umulig å oppgradere alle rutere samtiding. Dermed må vi kunne gjøre sånn at begge typer rutere kan operere sammen. Det er 2 hovedløsninger som er I bruk:
+
+-   Dual stack = Ruteren forstår begge protokoller og oversetter mellom
+
+-   Tunneling = IPv6 ruter behandler IPv6 datagram som data og pakker det inn i IPv4
