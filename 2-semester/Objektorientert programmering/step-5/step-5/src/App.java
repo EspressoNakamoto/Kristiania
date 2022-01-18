@@ -1,5 +1,9 @@
 public class App {
     public static void main(String[] args) {
-        new Program().problem4();;
+        Program App = new Program();
+        App.problem4();
+        App.task5();
+        
+        new Artist("Michael", null, "Oslo", "Norge").printObject();
     }
 }
