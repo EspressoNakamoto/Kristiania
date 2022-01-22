@@ -2,6 +2,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Program {
@@ -36,6 +39,60 @@ public class Program {
             userInputObject.close();
             System.out.println("Write successful");
         } catch (IOException e) {
+            System.out.println("An error has occured");
+            e.printStackTrace();
+        }
+    }
+
+    public void task7() {
+        try {
+            File opg7 = new File("src/files_step5/opg7.txt");
+            Scanner getArtist = new Scanner(opg7);
+            while (getArtist.hasNextLine()) {
+                String artistName = "";
+                String date = "";
+                String cityName = "";
+                String countryName = "";
+                if (getArtist.next() != "---") {
+                    
+                    int lineCounter = 1;
+                    for (int i = 0; i < lineCounter; i++) {
+                        if (getArtist.next() != "---") {
+                            String data = getArtist.nextLine();
+                            switch (i) {
+                                case 0:
+                                artistName = data;
+                                break;
+                                case 1:
+                                date = data;
+                                break;
+                                case 2:
+                                cityName = data;
+                                break;
+                                case 3:
+                                countryName = data;
+                                break;
+                                
+                                default:
+                                break;
+                            }
+                        }
+                        if (lineCounter < 4) {
+                            lineCounter ++;
+                        }
+                    }
+                } else {
+                    getArtist.nextLine();
+                }
+                System.out.println(artistName + date + cityName + countryName);
+                DateTimeFormatter dFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
+                LocalDate stringToDate = LocalDate.parse(date, dFormatter);
+                
+                new Artist(artistName, stringToDate, cityName, countryName);
+
+            }
+            getArtist.close();
+        } catch (FileNotFoundException e) {
             System.out.println("An error has occured");
             e.printStackTrace();
         }

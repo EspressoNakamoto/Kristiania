@@ -6,10 +6,10 @@ public class App {
     public static void main(String[] args) {
         System.out.println();
         Program prog = new Program();
-        // prog.runProgram();
+        prog.runProgram();
         // prog.task4();
         // prog.name();
-        prog.task7();
+        // prog.task7();
     }
 }
 
