@@ -53,11 +53,11 @@ public class Program {
                 String date = "";
                 String cityName = "";
                 String countryName = "";
-                if (getArtist.next() != "---") {
+                if (getArtist.findInLine("---") != "---") {
                     
                     int lineCounter = 1;
                     for (int i = 0; i < lineCounter; i++) {
-                        if (getArtist.next() != "---") {
+                        if (getArtist.findInLine("---") != "---") {
                             String data = getArtist.nextLine();
                             switch (i) {
                                 case 0:
@@ -81,15 +81,12 @@ public class Program {
                             lineCounter ++;
                         }
                     }
-                } else {
-                    getArtist.nextLine();
                 }
-                System.out.println(artistName + date + cityName + countryName);
                 DateTimeFormatter dFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
                 LocalDate stringToDate = LocalDate.parse(date, dFormatter);
-                
-                new Artist(artistName, stringToDate, cityName, countryName);
-
+                new Artist(artistName, stringToDate, cityName, countryName).printObject();
+                System.out.println();
+                getArtist.nextLine();
             }
             getArtist.close();
         } catch (FileNotFoundException e) {
