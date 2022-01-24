@@ -12,7 +12,7 @@ public class Program {
         String userInputOne = input.nextLine();
         String userInputTwo = input.nextLine();
         String userInputThree = input.nextLine();
-        input.close();
+        // input.close();
 
         ArrayList<String> inputArray = new ArrayList<String>();
         inputArray.add(userInputOne);
@@ -32,7 +32,7 @@ public class Program {
             if (userInput >= 0) {
                 inputArray.add(userInput);
             } else {
-                input.close();
+                // input.close();
                 positive = false;
                 int sum = 0;
                 for (Integer integer : inputArray) {
