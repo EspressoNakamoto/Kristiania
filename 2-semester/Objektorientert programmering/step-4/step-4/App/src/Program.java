@@ -7,6 +7,7 @@ public class Program {
     }
 
     public void task4() {
+        // Scanner takes input from user
         Scanner input = new Scanner(System.in);
         System.out.println("Type 3 strings");
         String userInputOne = input.nextLine();
@@ -14,11 +15,13 @@ public class Program {
         String userInputThree = input.nextLine();
         // input.close();
 
+        // Puts input into arraylist
         ArrayList<String> inputArray = new ArrayList<String>();
         inputArray.add(userInputOne);
         inputArray.add(userInputTwo);
         inputArray.add(userInputThree);
 
+        // Prints arraylist
         System.out.println(inputArray);
     }
 
