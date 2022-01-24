@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Program {
     public void problem4() {
         try {
-            File opg4 = new File("src/files_step5/opg4.txt");
+            File opg4 = new File("step-5/src/files_step5/opg4.txt");
             Scanner readFile = new Scanner(opg4);
             while (readFile.hasNextLine()) {
                 String data = readFile.nextLine();
@@ -25,7 +25,7 @@ public class Program {
 
     public void task5() {
         try {
-            FileWriter writeToFile = new FileWriter("src/files_step5/opg5.txt");
+            FileWriter writeToFile = new FileWriter("step-5/src/files_step5/opg5.txt");
             Scanner userInputObject = new Scanner(System.in);
             System.out.println("Type in 5 strings");
             for (int i = 0; i < 5; i++) {
@@ -46,7 +46,7 @@ public class Program {
 
     public void task7() {
         try {
-            File opg7 = new File("src/files_step5/opg7.txt");
+            File opg7 = new File("step-5/src/files_step5/opg7.txt");
             Scanner getArtist = new Scanner(opg7);
             while (getArtist.hasNextLine()) {
                 String artistName = "";
