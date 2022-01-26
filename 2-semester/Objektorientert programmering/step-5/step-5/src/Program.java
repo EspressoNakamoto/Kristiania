@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -90,6 +91,42 @@ public class Program {
             }
             getArtist.close();
         } catch (FileNotFoundException e) {
+            System.out.println("An error has occured");
+            e.printStackTrace();
+        }
+    }
+
+    public void task8() {
+        try {
+            File opg8 = new File("src/files_step5/opg8.txt");
+            Scanner getArtist = new Scanner(opg8);
+
+            ArrayList<String> artistData = new ArrayList<String>();
+
+            while (getArtist.hasNextLine()) {
+                String data = getArtist.nextLine();
+                artistData.add(data);
+            }
+            for (String string : artistData) {
+                System.out.println(string);
+            }
+
+            System.out.println("What word do you want to replace?");
+            Scanner input = new Scanner(System.in);
+            String userInput = input.next();
+
+            for (String string : artistData) {
+                if (string.equalsIgnoreCase(userInput)) {
+                    System.out.println("Enter word:");
+                    String userReplace = input.next();
+                    string.replace(userInput, userReplace);
+                }
+            }
+
+            for (String string : artistData) {
+                System.out.println(string);
+            }
+        } catch (Exception e) {
             System.out.println("An error has occured");
             e.printStackTrace();
         }
