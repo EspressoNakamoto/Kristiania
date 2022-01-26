@@ -7,8 +7,8 @@ public class App {
         System.out.println();
         Program prog = new Program();
         prog.runProgram();
-        // prog.task4();
+        prog.task4();
         prog.task6();
-        // prog.task7();
+        prog.task7();
     }
 }
