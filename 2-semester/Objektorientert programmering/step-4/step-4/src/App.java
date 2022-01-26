@@ -8,7 +8,7 @@ public class App {
         Program prog = new Program();
         prog.runProgram();
         prog.task4();
-        prog.name();
-        prog.task7();
+        // prog.name();
+        // prog.task7();
     }
 }

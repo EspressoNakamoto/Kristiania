@@ -10,19 +10,20 @@ public class Program {
         // Scanner takes input from user
         Scanner input = new Scanner(System.in);
         System.out.println("Type 3 strings");
-        String userInputOne = input.nextLine();
-        String userInputTwo = input.nextLine();
-        String userInputThree = input.nextLine();
+        ArrayList<String> inputArray = new ArrayList<String>();
+
+        for (int i = 0; i < 3; i++) {
+            inputArray.add(input.next());
+
+        }
         // input.close();
 
-        // Puts input into arraylist
-        ArrayList<String> inputArray = new ArrayList<String>();
-        inputArray.add(userInputOne);
-        inputArray.add(userInputTwo);
-        inputArray.add(userInputThree);
-
         // Prints arraylist
-        System.out.println(inputArray);
+        System.out.println();
+        System.out.println("Output:");
+        for (String string : inputArray) {
+            System.out.println(string);
+        }
     }
 
     public void name() {
