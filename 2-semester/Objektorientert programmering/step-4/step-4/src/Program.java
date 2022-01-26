@@ -26,25 +26,19 @@ public class Program {
         }
     }
 
-    public void name() {
-        Scanner input = new Scanner(System.in);
+    public void task6() {
         System.out.println("Enter a number to add and end with a negative number");
-        ArrayList<Integer> inputArray = new ArrayList<Integer>();
-        Boolean positive = true;
-        while (positive == true) {
-            int userInput = input.nextInt();
-            if (userInput >= 0) {
-                inputArray.add(userInput);
-            } else {
-                // input.close();
-                positive = false;
-                int sum = 0;
-                for (Integer integer : inputArray) {
-                    sum += integer;
-                }
-                System.out.println("Sum: " + sum);
-            }
+        Scanner input = new Scanner(System.in);
+
+        int inputs = input.nextInt();
+        int sum = 0;
+
+        while (inputs >= 0) {
+            sum += inputs;
+            inputs = input.nextInt();
         }
+
+        System.out.println("Sum: " + sum);
     }
 
     public void task7() {
