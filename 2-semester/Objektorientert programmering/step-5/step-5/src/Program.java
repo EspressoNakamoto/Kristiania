@@ -98,7 +98,7 @@ public class Program {
 
     public void task8() {
         try {
-            File opg8 = new File("src/files_step5/opg8.txt");
+            File opg8 = new File("src/files_step5/opg7.txt");
             Scanner getArtist = new Scanner(opg8);
 
             ArrayList<String> artistData = new ArrayList<String>();
@@ -107,25 +107,48 @@ public class Program {
                 String data = getArtist.nextLine();
                 artistData.add(data);
             }
+            getArtist.close();
+
             for (String string : artistData) {
                 System.out.println(string);
             }
 
-            System.out.println("What word do you want to replace?");
+            System.out.println("Replace lines that includes:");
             Scanner input = new Scanner(System.in);
             String userInput = input.next();
 
-            for (String string : artistData) {
-                if (string.equalsIgnoreCase(userInput)) {
-                    System.out.println("Enter word:");
-                    String userReplace = input.next();
-                    string.replace(userInput, userReplace);
+            for (int i = 0; i < artistData.size(); i++) {
+                if (artistData.get(i).contains(userInput)) {
+                    System.out.println("New line");
+                    String newLine = input.next();
+                    String replaceLine = artistData.get(i);
+
+                    replaceLine.replace(userInput, newLine);
+
+                    artistData.set(i, newLine);
                 }
             }
+            input.close();
 
-            for (String string : artistData) {
-                System.out.println(string);
+            try {
+                File opg8New = new File("src/files_step5/opg8.txt");
+                Scanner opg8Scan = new Scanner(opg8New);
+                FileWriter writer = new FileWriter(opg8New);
+                
+                for (String string : artistData) {
+                    writer.write(string + "\n");
+                }
+                opg8Scan.close();
+                writer.close();
+            } catch (Exception e) {
+                System.out.println("And error has occured");
+                e.printStackTrace();
             }
+
+            for (String stringOut : artistData) {
+                System.out.println(stringOut);
+            }
+
         } catch (Exception e) {
             System.out.println("An error has occured");
             e.printStackTrace();
