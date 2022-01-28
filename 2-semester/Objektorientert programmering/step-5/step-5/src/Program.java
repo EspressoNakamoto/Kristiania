@@ -3,9 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Program {
@@ -46,7 +44,13 @@ public class Program {
     }
 
     public void task7() {
-        try {
+        File getArtists = new File("src/files_step5/opg7.txt");
+        ArrayList<Artist> artists = readArtists(getArtists);
+
+        for (Artist artist : artists) {
+            artist.printObject();
+        }
+        /* try {
             File opg7 = new File("src/files_step5/opg7.txt");
             Scanner getArtist = new Scanner(opg7);
             while (getArtist.hasNextLine()) {
@@ -93,7 +97,7 @@ public class Program {
         } catch (FileNotFoundException e) {
             System.out.println("An error has occured");
             e.printStackTrace();
-        }
+        } */
     }
 
     public void task8() {
@@ -153,5 +157,33 @@ public class Program {
             System.out.println("An error has occured");
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<Artist> readArtists(File file) {
+        ArrayList<Artist> artistsList = new ArrayList<>();
+
+        try {
+            Scanner scanFile = new Scanner(file);
+
+            while (scanFile.hasNextLine()) {
+                String name = scanFile.nextLine();
+                String date = scanFile.nextLine();
+                LocalDate strToDate = LocalDate.parse(date);
+                String city = scanFile.nextLine();
+                String country = scanFile.nextLine();
+
+                Artist group = new Artist(name, strToDate, city, country);
+                artistsList.add(group);
+
+                scanFile.nextLine();
+            }
+
+            scanFile.close();
+        } catch (FileNotFoundException exception) {
+            System.out.println("File not found!");
+            exception.printStackTrace();
+        }
+
+        return artistsList;
     }
 }

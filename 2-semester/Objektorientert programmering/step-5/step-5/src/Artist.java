@@ -50,6 +50,7 @@ public class Artist {
     
     // Prints values
     public void printObject() {
+        System.out.println();
         System.out.println("Name: " + this.artistName);
         System.out.println("Date of birth: " + this.dateOfBirth);
         System.out.println("City: " + this.City);
