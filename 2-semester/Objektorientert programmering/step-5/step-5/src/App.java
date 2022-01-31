@@ -3,7 +3,7 @@ public class App {
         Program App = new Program();
         // App.problem4();
         // App.task5();
-        App.task7();
-        // App.task8();
+        // App.task7();
+        App.task8();
     }
 }

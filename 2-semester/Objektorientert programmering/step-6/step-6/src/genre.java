@@ -1,3 +1,8 @@
-public enum genre {
-    CRIME, ACTION, FANTASY, CLASSIC, SCIFI, OTHER
+public enum Genre {
+    CRIME, 
+    ACTION, 
+    FANTASY, 
+    CLASSIC, 
+    SCIFI, 
+    OTHER
 }

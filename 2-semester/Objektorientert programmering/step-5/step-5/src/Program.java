@@ -101,7 +101,18 @@ public class Program {
     }
 
     public void task8() {
-        try {
+        File sourceFile = new File("src/files_step5/opg7.txt");
+        File destFile = new File("src/files_step5/opg8.txt");
+
+        ArrayList<Artist> artists = readArtists(sourceFile);
+
+        for (Artist artist : artists) {
+            artist.getCountry().equalsIgnoreCase("norge");
+            artist.setCountry("Norway");
+        }
+
+        writeArtists(artists, destFile);
+/*         try {
             File opg8 = new File("src/files_step5/opg7.txt");
             Scanner getArtist = new Scanner(opg8);
 
@@ -156,7 +167,7 @@ public class Program {
         } catch (Exception e) {
             System.out.println("An error has occured");
             e.printStackTrace();
-        }
+        } */
     }
 
     public ArrayList<Artist> readArtists(File file) {
@@ -185,5 +196,24 @@ public class Program {
         }
 
         return artistsList;
+    }
+
+    public void writeArtists(ArrayList<Artist> artistList, File file) {
+        try {
+            FileWriter writeToFile = new FileWriter(file);
+
+            for (Artist artist : artistList){
+                writeToFile.write(artist.getArtistName() + "\n");
+                writeToFile.write(artist.getDateOfBirth() + "\n");
+                writeToFile.write(artist.getCity() + "\n");
+                writeToFile.write(artist.getCountry() + "\n");
+                writeToFile.write("---\n");
+            }
+
+            writeToFile.close();
+        } catch (IOException ioException) {
+            System.out.println("An error has occured");
+            ioException.printStackTrace();
+        }
     }
 }

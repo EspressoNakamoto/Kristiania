@@ -1,11 +1,11 @@
-public class book {
+public class Book {
     private String title;
     private String author;
     private int pages;
-    private genre genre;
+    private Genre genre;
     private String isbn;
 
-    public book(String title, String author, int pages, genre genre, String isbn) {
+    public Book(String title, String author, int pages, Genre genre, String isbn) {
         this.title = title;
         this.author = author;
         this.pages = pages;
@@ -37,11 +37,11 @@ public class book {
         this.pages = pages;
     }
 
-    public genre getGenre() {
+    public Genre getGenre() {
         return genre;
     }
 
-    public void setGenre(genre genre) {
+    public void setGenre(Genre genre) {
         this.genre = genre;
     }
 
