@@ -18,10 +18,11 @@ public class BookRegister {
         this.books.add(book);
     }
 
-    public void test() {
-        for (Book book : books) {
-            System.out.println(book);
+    public ArrayList<Book> registeredBooks(){
+        ArrayList<Book> result = new ArrayList<>();
+        for(Book b : this.books){
+            result.add(b);
         }
+        return result;
     }
-
 }

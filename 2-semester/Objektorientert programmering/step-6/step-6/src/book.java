@@ -52,4 +52,8 @@ public class Book {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
+
+    public String toString(){
+        return "" + author + " - " + title + ", " + genre + ", " + isbn + "; ";
+    }
 }

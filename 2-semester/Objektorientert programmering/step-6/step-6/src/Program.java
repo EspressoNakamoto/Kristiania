@@ -14,19 +14,54 @@ public class Program {
         for (Book book : books) {
             register.registerBooks(book);
         }
-
     }
 
     public void programStart() {
 
-        register.test();
-
         displayMenu();
         
-        Scanner menuInput = new Scanner(System.in);
-        menuInput.nextInt();
+        Scanner userInput = new Scanner(System.in);
+        String input = "0";
+
+        while (!input.equals("8")) {
+            input = userInput.nextLine();
+            switch (input) {
+                case "0":
+                    displayMenu();
+                    break;
+
+                case "1": 
+                    for (Book b : register.registeredBooks()) {
+                        System.out.println(b.toString());
+                    }
+                    break;
+            
+                case "2":
+                    System.out.println("Add a book");
+                    Book newBook = newBook(userInput);
+                    break;
+                default:
+                    break;
+            }
+        }
     
-        menuInput.close();
+        userInput.close();
+    }
+
+    public Book newBook(Scanner sc) {
+        System.out.println("New book:");
+        System.out.println("Title: ");
+        String title = sc.nextLine();
+
+        System.out.println("Author: ");
+        String author = sc.nextLine();
+
+        System.out.println("ISBN: ");
+        String isbn = sc.nextLine();
+
+
+        
+        Book b = new Book();
     }
 
     public ArrayList<Book> readBooks(String file) {
