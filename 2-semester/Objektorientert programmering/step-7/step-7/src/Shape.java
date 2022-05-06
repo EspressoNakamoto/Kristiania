@@ -22,7 +22,7 @@ public class Shape {
         this.color = color;
     }
 
-    public boolean getFill(boolean fill) {
+    public boolean getFill() {
         return fill;
     }
 
@@ -30,7 +30,10 @@ public class Shape {
         this.fill = fill;
     }
 
-    public String toString() {
-        return "Shape = " + "Color: " + color + "Filled: " + fill;
+    public String toString(){
+        if(this.getFill()) {
+            return String.format("a Shape with color of %s and filled.", color.toString());
+        }
+        return String.format("a Shape with color of %s and not filled.", color.toString());
     }
 }
