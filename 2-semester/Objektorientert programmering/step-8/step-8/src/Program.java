@@ -67,7 +67,7 @@ public class Program {
         System.out.println("---------------------");
 
         for (Shape iterable_element : shapes.values()) {
-            System.out.println(iterable_element);
+            System.out.print(iterable_element);
             System.out.println();
         }
 
