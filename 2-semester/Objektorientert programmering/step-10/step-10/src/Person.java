@@ -1,6 +1,6 @@
 public class Person {
-    private int age;
-    private String name;
+    int age;
+    String name;
 
     public Person(int age, String name) {
         this.age = age;
@@ -24,10 +24,18 @@ public class Person {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
     public String toString() {
-        return "Person{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                '}';
+        return String.format("This person is %s years old and is called %s. %s %s", getAge(), getName(), equals(this),
+                hashCode());
     }
 }
