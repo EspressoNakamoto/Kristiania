@@ -27,14 +27,4 @@ public class ProgramTest {
             fail(e);
         }
     }
-
-    @Test
-    void testRunProgram() {
-
-    }
-
-    @Test
-    void testValidatePerson() {
-
-    }
 }

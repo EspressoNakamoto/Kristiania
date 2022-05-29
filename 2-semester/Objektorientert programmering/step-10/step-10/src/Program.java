@@ -1,7 +1,9 @@
 
 // Imports
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 public class Program {
     // HashSet to keep Person objects
@@ -59,5 +61,38 @@ public class Program {
         if (p.getName() == null) {
             throw new IllegalArgumentException("Null when String expected");
         }
+    }
+
+    // Method to add 10 random people
+    public void addTenPeopleToHashSet() {
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("Colin Ayala");
+        names.add("Remington Perry");
+        names.add("Jace Lamb");
+        names.add("Kaleb Gardner");
+        names.add("Abram Richard");
+        names.add("Damon Giles");
+        names.add("Janiya Garner");
+        names.add("Reid Salazar");
+        names.add("Brandon Cabrera");
+        names.add("Victor Thomas");
+
+        for (int i = 0; i < 10; i++) {
+            persons.add(new Person((int) (Math.random() * 50), names.get(i)));
+        }
+    }
+
+    // Method to return Set of Person ojbects over given age
+    public Set<Person> getPersonsOverAge(int age) {
+        Set<Person> returnPersons = new HashSet<>();
+
+        for (Person person : persons) {
+            if (person.getAge() > age) {
+                returnPersons.add(person);
+            }
+        }
+
+        return returnPersons;
     }
 }
